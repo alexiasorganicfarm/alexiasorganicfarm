@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia's Garden - Farm Visits & Fresh Produce</title>
+    <meta name="description" content="Visit Alexia's Garden in Beltangadi, Dakshina Kannada. Explore our 5-acre tropical farm, enjoy guided tours, fresh produce, and get plant care tips and recipes powered by AI.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and general body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fbf8; /* Light green-ish background */
+            color: #333;
+            overflow-x: hidden; /* Helps prevent horizontal scroll on small devices */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            cursor: grab;
+        }
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-4xl font-extrabold tracking-tight mb-2 md:mb-0">Alexia's Garden</h1>
+            <nav>
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
+                    <li><a href="#home" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Home</a></li>
+                    <li><a href="#about" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">About Our Farm</a></li>
+                    <li><a href="#experiences" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Farm Experiences</a></li>
+                    <li><a href="#gallery" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Gallery</a></li>
+                    <li><a href="#produce" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Fresh Produce</a></li>
+                    <li><a href="#contact" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Contact & Visit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center p-4"
+        style="background-image: url('https://placehold.co/1920x1080/a8e6cf/000000?text=Alexia%27s+Garden+Main+View');">
+        <!-- NOTE: For your live website, replace the 'placehold.co' URL below with your actual main view image URL. -->
+        <!-- Example: background-image: url('your-image-folder/your-main-view-image.jpg'); -->
+        <div class="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
+        <div class="relative z-10 text-white max-w-4xl mx-auto bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-xl shadow-2xl">
+            <h2 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Welcome to Alexia's Garden</h2>
+            <p class="text-xl md:text-2xl mb-8">Discover the bounty of nature on our 5-acre tropical farm in Beltangadi.</p>
+            <a href="#experiences" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Plan Your Farm Visit
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-8">About Our 5-Acre Tropical Farm</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/d4edda/000000?text=Farm+Overview" alt="Overview of Alexia's Garden Farm" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual farm overview image URL -->
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg leading-relaxed mb-4">
+                        Alexia's Garden is a vibrant 5-acre tropical farm nestled in the serene landscapes of Beltangadi, Dakshina Kannada. Our journey began with a deep passion for the earth and a commitment to sustainable living. We've poured our heart into cultivating this land, transforming it into a flourishing sanctuary where nature's bounty thrives.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Our farm is a celebration of biodiversity, home to majestic Jackfruit, sweet Mango, fragrant Cinnamon, and countless other treasures like Jamun, Kokum, Coconut, and Cashew. With a tranquil pond and flourishing vegetable patches, it’s a living testament to the beauty and abundance that sustainable farming can achieve.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        We invite you to step into our green haven. Walk among the trees, breathe in the fresh air, and discover the simple joys of connecting with the land. Alexia's Garden is more than just a farm; it's a place where you can experience the profound peace of nature and witness the magic of growth firsthand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farm Experiences Section -->
+    <section id="experiences" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-6xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-12">Plan Your Farm Experience</h2>
+            <p class="text-xl text-gray-700 mb-10">Discover our unique day visit packages, designed for every interest!</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Experience Card 1: Simple Self-Walk -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">1. The Garden Walk</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Explore our lush 5-acre farm at your own pace. Wander through diverse fruit and spice plantations, enjoy the serene pond, and capture beautiful moments.
+                    </p>
+                    <ul class="text-left text-gray-600 mb-4 list-disc list-inside">
+                        <li>Self-guided tour of the farm</li>
+                        <li>Photography opportunities</li>
+                        <li>Enjoy fresh air & nature</li>
+                    </ul>
+                    <p class="text-3xl font-bold text-green-800 mb-4">₹100 / person</p>
+                    <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-md">Book Now</a>
+                </div>
+
+                <!-- Experience Card 2: Guided Nature Tour -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">2. Guided Nature Tour</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Join our expert guide for an insightful journey through the farm. Learn about our plants, organic practices, and the local ecosystem.
+                    </p>
+                    <ul class="text-left text-gray-600 mb-4 list-disc list-inside">
+                        <li>Guided walk with explanations</li>
+                        <li>Learn about specific crops (Jackfruit, Mango, Spices)</li>
+                        <li>Q&A session with our farmer</li>
+                    </ul>
+                    <p class="text-3xl font-bold text-green-800 mb-4">₹150 / person</p>
+                    <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-md">Book Now</a>
+                </div>
+
+                <!-- Experience Card 3: Visit + Village Meal -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">3. Visit + Village Meal</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Combine your farm tour with a delicious, authentic farm-style vegetarian meal prepared with fresh ingredients from our garden.
+                    </p>
+                    <ul class="text-left text-gray-600 mb-4 list-disc list-inside">
+                        <li>Guided Nature Tour included</li>
+                        <li>Traditional banana leaf lunch or snacks</li>
+                        <li>Experience true farm-to-table dining</li>
+                    </ul>
+                    <p class="text-3xl font-bold text-green-800 mb-4">₹250 / person</p>
+                    <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-md">Book Now</a>
+                </div>
+
+                <!-- Experience Card 4: Full Farm Day Experience -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">4. Full Farm Day</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Immerse yourself in farm life! Enjoy a comprehensive tour, participate in seasonal activities, and savor a farm-fresh meal.
+                    </p>
+                    <ul class="text-left text-gray-600 mb-4 list-disc list-inside">
+                        <li>All features of Guided Tour + Meal</li>
+                        <li>Seasonal fruit picking (if available)</li>
+                        <li>Planting/feeding demo or pond activity</li>
+                        <li>Small farm gift to take home</li>
+                    </ul>
+                    <p class="text-3xl font-bold text-green-800 mb-4">₹400-₹500 / person</p>
+                    <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-md">Book Now</a>
+                </div>
+            </div>
+            <p class="text-lg text-gray-700 mt-10">Group discounts and customized packages available for schools and organizations. Contact us for details!</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-6xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-12">Our Farm Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1: Jackfruit -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/c8e6c9/000000?text=Jackfruit+Harvest" alt="Jackfruit Harvest" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Abundant Jackfruit Harvest</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2: Jamun -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/b2dfdb/000000?text=Jamun+Trees" alt="Jamun Trees" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Lush Jamun Trees</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3: Coconut Grove -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/a7d9b9/000000?text=Coconut+Grove" alt="Coconut Grove" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Serene Coconut Grove</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 4: Spice Plants -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/9ad0a8/000000?text=Spice+Plants" alt="Spice Plants" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Fragrant Spice Plants</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 5: Farm Pond -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/8bc34a/000000?text=Farm+Pond" alt="Farm Pond" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Tranquil Farm Pond</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 6: Vegetable Patch -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/800x600/7cb342/000000?text=Vegetable+Patch" alt="Vegetable Patch" class="w-full h-64 object-cover">
+                    <!-- NOTE: Replace 'placehold.co' URL with your actual image URL -->
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Fresh Vegetable Patch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fresh Produce Section -->
+    <section id="produce" class="py-16 px-6 bg-green-700 text-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8">Farm Fresh Produce</h2>
+            <p class="text-lg mb-8">
+                Experience the taste of nature! We offer a variety of seasonal fruits, nuts, and spices directly from our farm.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">What's in Season?</h3>
+                    <ul class="text-lg list-disc list-inside text-left">
+                        <li>Jackfruit (seasonal)</li>
+                        <li>Mangoes (seasonal)</li>
+                        <li>Bananas (year-round)</li>
+                        <li>Jamun (seasonal)</li>
+                        <li>Coconuts (year-round)</li>
+                        <li>Cashew Nuts (seasonal)</li>
+                        <li>Fresh Vegetables</li>
+                        <li>Cinnamon & Nutmeg (processed)</li>
+                        <li>And more!</li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">How to Buy</h3>
+                    <p class="text-lg mb-4">
+                        Visitors can purchase fresh produce directly at the farm during their visit. For bulk orders or specific inquiries, please contact us.
+                    </p>
+                    <p class="text-lg">Support local farming and enjoy the freshest ingredients!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-8">Contact & Visit Us</h2>
+            <p class="text-lg text-gray-700 mb-8">Ready to experience Alexia's Garden? Get in touch or find us on the map!</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="text-center bg-white p-6 rounded-xl shadow-md w-full md:w-1/2 border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Reach Out</h3>
+                    <p class="text-lg mb-2">Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-green-600 hover:underline">alexiasorganicfarm@gmail.com</a></p>
+                    <p class="text-lg mb-2">Phone: <a href="tel:+918296005072" class="text-green-600 hover:underline">+91 (829) 600-5072</a></p>
+                    <p class="text-lg">Address: Alexia's Garden, 27FX+5X, Chandukuru, Karnataka 574214, India</p>
+                </div>
+                <div class="text-center bg-white p-6 rounded-xl shadow-md w-full md:w-1/2 border border-green-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Business Hours</h3>
+                    <p class="text-lg mb-2">Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                    <p class="text-lg">Sunday: Closed (or by special appointment)</p>
+                    <p class="text-lg mt-4 font-semibold">Advance booking recommended for guided tours and meal packages.</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <h3 class="text-2xl font-semibold text-green-700 mb-4">Find Us on Google Maps</h3>
+                <!-- Updated iframe src with the specific address -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.376829744477!2d75.299722!3d13.022778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4772097e88229%3A0x6b779a1f7c00c7e!2s27FX%2B5X%2C%20Chandukuru%2C%20Karnataka%20574214%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                  aria-hidden="false" tabindex="0"
+                  class="rounded-xl shadow-lg"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-800 text-white py-6 px-6 text-center rounded-t-xl mt-6">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Alexia's Garden. All rights reserved.</p>
+            <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
+        </div>
+    </footer>
+
+    <script>
+        // All JavaScript related to AI features has been removed.
+        // If you wish to re-enable them, you'll need to re-integrate the Gemini API calls.
+    </script>
+</body>
+</html>
