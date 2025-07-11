@@ -19,7 +19,7 @@ We are a 5-acre tropical farm nestled in the lush greenery of Beltangadi, Dakshi
 👉 [alexiasorganicfarm.github.io/alexias-garden-website](https://alexiasorganicfarm.github.io/alexias-garden-website](https://alexiasorganicfarm.github.io/alexiasorganicfarm/))
 
 📩 **Get in touch:**  
-📧 Email: info@alexisgarden.com  
+📧 Email: alexiasorganicfarm@gmail.com  
 📍 Location: Chandukuru, Beltangadi, Karnataka
 
 > “Let nature feed you. Grow organic. Live rooted.” 🌿
