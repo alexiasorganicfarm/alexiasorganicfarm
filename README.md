@@ -17,7 +17,7 @@ We are a 5-acre tropical farm nestled in the lush greenery of Beltangadi, Dakshi
 - A peaceful escape into nature 🌳
 
 📸 Visit our website to see photos and plan your visit:  
-👉 [alexiasorganicfarm.com](http://alexiasorganicfarm.com)  
+👉 https://alexiasorganicfarm.com 
 📩 Contact us: alexiasorganicfarm@gmail.com
 
 > “Let nature feed you. Grow organic. Live rooted.” 🌿
