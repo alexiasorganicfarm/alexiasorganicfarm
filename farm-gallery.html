@@ -1,183 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4P26TY8NC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J4P26TY8NC');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexia's Organic Farm - Photo Gallery</title>
-    <meta name="description" content="Explore the beautiful photo gallery of Alexia's Organic Farm, featuring our tropical farm, produce, and experiences.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexia's Organic Farm - Photo Gallery</title>
+  <meta name="description" content="Explore the beautiful photo gallery of Alexia's Organic Farm. See our farm, produce, and nature-filled surroundings.">
+  <link rel="canonical" href="https://alexiasorganicfarm.com/farm-gallery.html" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the Inter font and general body styling */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fbf8; /* Light green-ish background */
-            color: #333;
-            overflow-x: hidden; /* Helps prevent horizontal scroll on small devices */
-        }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-            border-radius: 10px;
-            cursor: grab;
-        }
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <!-- Favicon & Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:title" content="Alexia's Organic Farm - Photo Gallery">
+  <meta property="og:description" content="Explore the tropical farm, produce, and experiences in pictures.">
+  <meta property="og:image" content="https://alexiasorganicfarm.com/images/1.webp">
+  <meta property="og:url" content="https://alexiasorganicfarm.com/farm-gallery.html">
+  <meta property="og:type" content="website">
+
+  <!-- SEO: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alexia's Organic Farm - Photo Gallery">
+  <meta name="twitter:description" content="Explore the tropical farm, produce, and experiences in pictures.">
+  <meta name="twitter:image" content="https://alexiasorganicfarm.com/images/1.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="antialiased">
-    <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <a href="index.html" class="mb-2 md:mb-0 text-3xl font-bold">Alexia's Organic Farm</a>
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
-                    <li><a href="index.html" class="hover:text-green-200 transition duration-300 ease-in-out text-lg font-medium">Back to Home</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="bg-white text-gray-900 font-inter">
+  <header class="bg-green-800 text-white p-4 flex justify-between items-center flex-col md:flex-row">
+    <a href="https://alexiasorganicfarm.com/#home" class="mb-2 md:mb-0 text-3xl font-bold">Alexia's Organic Farm</a>
+    <a href="https://alexiasorganicfarm.com/farm-gallery.html" class="text-white underline">← Back to Home</a>
+  </header>
 
-    <section id="gallery" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
-        <div class="container mx-auto text-center max-w-6xl">
-            <h1 class="text-4xl font-bold text-green-800 mb-12">Our Farm Photo Gallery</h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/1.jpeg" alt="A scenic view of the farm with tall palm trees and a misty mountain in the background, showing lush green vegetation" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Scenic Farm View</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/2.jpeg" alt="A lush green mango tree with several unripe mangoes visible, surrounded by other vegetation" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Thriving Mango Tree</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/3.jpeg" alt="Rows of young pumpkin or squash plants growing in a field with green grass and trees in the background" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Fresh Vegetable Patch</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/4.jpeg" alt="A collection of freshly picked green bananas, long beans, gourds, and other vegetables on a wooden bench" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Harvested Produce</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/5.jpeg" alt="A collection of fresh vegetables including gourds, long beans, and small red fruits on a wooden bench" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Colorful Harvest</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/6.jpeg" alt="Freshly harvested long beans, cucumbers, and other vegetables on a wooden bench" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Farm Fresh Veggies</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/7.jpeg" alt="Various fresh vegetables and fruits, including long beans, gourds, and mangoes, laid out on a bench and in baskets" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Bountiful Harvest Display</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/8.jpeg" alt="A large quantity of green, unripe mangoes laid out on a tarp or cloth for drying or sorting" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Mangoes for Processing</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/9.jpeg" alt="A jackfruit tree laden with multiple large jackfruits in a green, grassy field" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Jackfruit Tree</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/10.jpeg" alt="A natural rock formation beside a small pond or stream on the farm, surrounded by lush vegetation" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Farm Pond & Rocks</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/11.jpeg" alt="A serene farm pond with large rocks, surrounded by green grass and trees, reflecting the sky" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Peaceful Pond Scene</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/12.jpeg" alt="Several ripe, yellow-orange fruits, possibly cocoa pods or similar, on a white sack" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Tropical Fruits</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/13.jpeg" alt="Harvested root vegetables, possibly cassava or tapioca, alongside some okra and white tubers on a wooden surface" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Root Vegetables</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/14.jpeg" alt="A wide shot of a cleared farm field with young palm trees and other saplings planted, under a cloudy sky" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">New Plantings</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img loading="lazy" src="images/15.jpeg" alt="A view of a newly planted area on the farm, with young trees and ground covered in straw, surrounded by lush greenery" class="w-full h-64 object-cover object-center" onerror="this.src='images/fallback.jpg';">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Sustainable Practices</p>
-                    </div>
-                </div>
-            </div>
+  <main class="p-6">
+    <h1 class="text-4xl font-bold mb-4 text-center">Farm Gallery</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Example image block -->
+      <div>
+        <img src="images/1.webp" alt="Farm view 1" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <div>
+        <img src="images/2.webp" alt="Farm view 2" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <div>
+        <img src="images/3.webp" alt="Organic produce display" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <div>
+        <img src="images/4.webp" alt="Visitors enjoying tour" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <div>
+        <img src="images/5.webp" alt="Pond and greenery" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <div>
+        <img src="images/6.webp" alt="Farm entrance" loading="lazy" class="rounded shadow-md w-full">
+      </div>
+      <!-- Add more .webp images as needed -->
+    </div>
+  </main>
 
-            <div class="mt-12 text-center">
-                <p class="text-lg text-gray-700 mb-6">Want to see even more of Alexia's Organic Farm?</p>
-                <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Follow Us on Instagram for More Photos!
-                </a>
-                <p class="text-sm text-gray-500 mt-4">Opens in a new tab.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-green-800 text-white py-6 px-6 text-center rounded-t-xl mt-6">
-        <div class="container mx-auto">
-            <p>&copy; <span id="current-year-gallery"></span> Alexia's Organic Farm. All rights reserved.</p>
-            <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Dynamically update current year in footer for the gallery page
-        document.getElementById('current-year-gallery').textContent = new Date().getFullYear();
-    </script>
+  <footer class="bg-green-800 text-white text-center py-4 mt-6">
+    <p>Follow us on <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="underline">Instagram</a></p>
+    <p>&copy; 2025 Alexia's Organic Farm</p>
+  </footer>
 </body>
 </html>
