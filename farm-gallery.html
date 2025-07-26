@@ -31,9 +31,26 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Optional: Add a smooth transition for the modal */
-        .modal {
-            transition: opacity 0.3s ease-in-out;
+        .image-container {
+            position: relative;
+            overflow: hidden; /* Ensures overlay stays within bounds */
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%); /* Start hidden below the image */
+            transition: transform 0.3s ease-out;
+            text-align: center;
+        }
+
+        .image-container.show-caption .image-caption {
+            transform: translateY(0); /* Slide up to show */
         }
     </style>
 </head>
@@ -48,50 +65,95 @@
     <main class="p-6">
         <h1 class="text-4xl font-bold mb-4 text-center">Farm Gallery</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/1.webp" alt="Farm view 1: Lush green fields under a clear sky with palm trees and a misty mountain in the background." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    Farm view 1: Lush green fields under a clear sky with palm trees and a misty mountain in the background.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/2.webp" alt="A vibrant mango tree laden with green, unripe mangoes surrounded by lush foliage." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A vibrant mango tree laden with green, unripe mangoes surrounded by lush foliage.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/3.webp" alt="Rows of young, healthy pumpkin plants growing in rich soil amidst green grass." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    Rows of young, healthy pumpkin plants growing in rich soil amidst green grass.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/4.webp" alt="A rustic wooden bench displaying a fresh harvest of organic vegetables including bananas, gourds, and long beans against a brick wall." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A rustic wooden bench displaying a fresh harvest of organic vegetables including bananas, gourds, and long beans against a brick wall.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/5.webp" alt="A wide shot of a wooden bench filled with a colorful assortment of freshly picked organic vegetables and fruits." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A wide shot of a wooden bench filled with a colorful assortment of freshly picked organic vegetables and fruits.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/6.webp" alt="A close-up of a wooden bench showcasing a variety of organic produce, including light green gourds, long beans, and small red and yellow fruits." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A close-up of a wooden bench showcasing a variety of organic produce, including light green gourds, long beans, and small red and yellow fruits.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/7.webp" alt="A large variety of freshly harvested organic vegetables and fruits laid out on a wooden bench and in baskets, ready for market." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A large variety of freshly harvested organic vegetables and fruits laid out on a wooden bench and in baskets, ready for market.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/8.webp" alt="Numerous green mangoes spread out on white sheets on the floor, indicating a bountiful harvest." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    Numerous green mangoes spread out on white sheets on the floor, indicating a bountiful harvest.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/9.webp" alt="A tall jackfruit tree heavily laden with large, green jackfruits, standing in a vibrant green field with distant mountains." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A tall jackfruit tree heavily laden with large, green jackfruits, standing in a vibrant green field with distant mountains.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/10.webp" alt="A tranquil scene of a small stream flowing past a large, dark rock formation and surrounded by lush green foliage." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A tranquil scene of a small stream flowing past a large, dark rock formation and surrounded by lush foliage.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/11.webp" alt="A serene pond on the farm with two large white rocks, surrounded by lush green grass and trees under a cloudy sky." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A serene pond on the farm with two large white rocks, surrounded by lush green grass and trees under a cloudy sky.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/12.webp" alt="A collection of ripe, yellow and green cocoa pods resting on a white sack, showcasing a fresh harvest." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A collection of ripe, yellow and green cocoa pods resting on a white sack, showcasing a fresh harvest.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/13.webp" alt="A display of freshly harvested cassava roots and some green okra pods on a wooden bench against a concrete wall." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A display of freshly harvested cassava roots and some green okra pods on a wooden bench against a concrete wall.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/14.webp" alt="A newly planted field with young saplings, surrounded by tall palm trees under a dramatic cloudy sky, showing the farm's expansion." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A newly planted field with young saplings, surrounded by tall palm trees under a dramatic cloudy sky, showing the farm's expansion.
+                </div>
             </div>
-            <div class="rounded shadow-md overflow-hidden cursor-pointer" onclick="showImageText(this)">
+            <div class="rounded shadow-md overflow-hidden cursor-pointer image-container" onclick="toggleImageCaption(this)">
                 <img src="images/15.webp" alt="A wide view of a cleared farm plot with young plants, covered in dry grass clippings, ready for new crops under a bright sky." loading="lazy" class="h-full w-full object-cover">
+                <div class="image-caption">
+                    A wide view of a cleared farm plot with young plants, covered in dry grass clippings, ready for new crops under a bright sky.
+                </div>
             </div>
         </div>
     </main>
@@ -101,24 +163,10 @@
         <p>&copy; 2025 Alexia's Organic Farm</p>
     </footer>
 
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden modal">
-        <div class="bg-white p-6 rounded-lg shadow-xl max-w-lg mx-auto relative">
-            <button class="absolute top-2 right-4 text-gray-700 text-3xl font-bold" onclick="closeModal()">&times;</button>
-            <p id="modalText" class="text-lg font-semibold text-gray-800"></p>
-        </div>
-    </div>
-
     <script>
-        function showImageText(element) {
-            const image = element.querySelector('img');
-            const altText = image.alt;
-            
-            document.getElementById('modalText').textContent = altText;
-            document.getElementById('imageModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('imageModal').classList.add('hidden');
+        function toggleImageCaption(element) {
+            // Toggles the 'show-caption' class on the clicked image container
+            element.classList.toggle('show-caption');
         }
     </script>
 </body>
