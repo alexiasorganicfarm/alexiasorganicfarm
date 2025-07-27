@@ -11,7 +11,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="VtsixZiCKrkSIbhz7g-c-Gz63KNTElwNw-tnaVaxacQ" /> <link rel="canonical" href="https://alexiasorganicfarm.com/" />
+    <meta name="google-site-verification" content="VtsixZiCKrkSIbhz7g-c-Gz63KNTElwNw-tnaVaxacQ" />
+    <link rel="canonical" href="https://alexiasorganicfarm.com/" />
     <title>Alexia's Organic Farm | Organic Produce & Farm Tours in Beltangadi, Mangalore & Dakshina Kannada</title>
     <meta name="description" content="Visit Alexia's Organic Farm for organic produce, guided tours, and farm experiences near Beltangadi, Mangalore, Udupi, and Dakshina Kannada. Explore our 5-acre tropical farm.">
     <meta name="keywords" content="Alexia's Organic Farm, alexis organic farm, organic farm beltangadi, dakshina kannada farm visit, alexas organic farm, alexia farm visit, alexia's farm produce, organic farm Karnataka, alexas farm, alexa's organic, beltangadi farm tours, dakshina kannada farm, organic farm Mangalore, organic produce Mangalore, farm fresh Mangalore, buy organic Mangalore, Mangalore organic vegetables, Mangalore farm tours, sustainable farming Mangalore, local organic farm Mangalore, organic food Mangalore, organic food udupi, udupi organic farm, malnad organic farm, coorg organic farm, chikmagalur organic farm, shimoga organic farm, sakleshpur organic farm, hassan organic farm">
@@ -107,6 +108,10 @@
         .experience-card {
             @apply bg-white p-6 rounded-xl shadow-md border border-green-200 transform transition duration-300 hover:scale-105 hover:shadow-lg;
         }
+        /* Custom styling for testimonial cards */
+        .testimonial-card {
+            @apply bg-white p-6 rounded-xl shadow-md border border-green-200 text-left;
+        }
     </style>
 </head>
 
@@ -114,8 +119,9 @@
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <a href="https://alexiasorganicfarm.com/#home" class="flex items-center space-x-3 mb-2 md:mb-0">
-                <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" />
-                </a>
+                <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/96x96/d4edda/000000?text=Logo';" />
+                <!-- Removed the span for farm name next to the logo -->
+            </a>
             <nav>
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
                     <li><a href="#home" class="hover:text-green-200 transition text-lg font-medium">Home</a></li>
@@ -216,7 +222,8 @@
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-12">What Our Visitors Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                </div>
+                <!-- Testimonials will be dynamically loaded or added here -->
+            </div>
             <a href="#contact" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Share Your Experience</a>
         </div>
     </section>
@@ -229,10 +236,10 @@
                 <div class="bg-green-50 p-6 rounded-xl shadow-md border border-green-200 text-left">
                     <h3 class="text-2xl font-semibold text-green-700 mb-2">Monsoon Planting Season Begins!</h3>
                     <p class="text-sm text-gray-600 mb-4">July 25, 2025</p>
-                    <p class="text-gray-800">We're excited to announce the start of our monsoon planting! Learn about the new crops we're introducing this season...</p>
+                    <p class="text-gray-800">We're excited to announce the start of our monsoon planting! Learn about the new crops we're introducing this season and how we're preparing for a bountiful harvest.</p>
                     <a href="#" class="inline-block mt-4 text-green-600 hover:underline font-medium">Read More</a>
                 </div>
-                </div>
+            </div>
             <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition mt-10 inline-block">View All News</a>
         </div>
     </section>
@@ -248,11 +255,12 @@
                         <li>Jackfruit, Mango, Jamun (seasonal)</li>
                         <li>Bananas, Coconuts (year-round)</li>
                         <li>Cashews, Cinnamon, Vegetables</li>
+                        <li>Kokum, Pepper, Arecanut</li>
                     </ul>
                 </div>
                 <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-md">
                     <h3 class="text-2xl font-semibold mb-4">How to Buy</h3>
-                    <p class="text-lg mb-4">Contact us via email to book a purchase appointment.</p>
+                    <p class="text-lg mb-4">Contact us via email or WhatsApp to book a purchase appointment. We ensure you get the freshest produce directly from our farm.</p>
                     <p class="text-lg">Support local farming and eat fresh!</p>
                 </div>
             </div>
@@ -279,17 +287,18 @@
             </div>
             <div class="mt-10">
                 <h3 class="text-2xl font-semibold text-green-700 mb-4">Find Us on Google Maps</h3>
-                <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1753530243709!5m2!1sen!2sae"
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Location of Alexia's Organic Farm on Google Maps"
-    class="rounded-xl shadow-lg w-full max-w-lg mx-auto">
-</iframe>
+                <!-- Responsive Google Maps Embed -->
+                <div class="relative w-full" style="padding-bottom: 75%;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1753530243709!5m2!1sen!2sae"
+                        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Location of Alexia's Organic Farm on Google Maps"
+                        class="rounded-xl shadow-lg">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
