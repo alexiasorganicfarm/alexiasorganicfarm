@@ -384,14 +384,48 @@
             <!-- Audio Player with Credits -->
             <div class="w-full md:w-auto">
                 <p class="text-sm mb-2">Now playing: Forest Lullaby</p>
-                <audio controls loop autoplay class="w-full md:w-64">
+                <!-- Updated audio element with autoplay but without the muted attribute -->
+                <audio id="background-audio" loop autoplay class="hidden">
                     <source src="forest-lullaby.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+                <div class="flex items-center justify-center space-x-2">
+                    <button id="play-pause-button" class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition">
+                        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        </svg>
+                        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <button id="mute-unmute-button" class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition">
+                        <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9.383 14.856A1 1 0 018 14.28V5.72a1 1 0 011.383-.976l6.637 3.318a.5.5 0 010 .876l-6.637 3.318z" clip-rule="evenodd" />
+                            <path d="M18.835 15.11a1 1 0 01-1.414 1.414L10 9.414l-7.421 7.421a1 1 0 11-1.414-1.414L8.586 8 1.169 1.179a1 1 0 111.414-1.414L10 6.586l7.421-7.421a1 1 0 011.414 1.414L11.414 8l7.421 7.421z" />
+                        </svg>
+                        <svg id="unmute-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9.383 14.856A1 1 0 018 14.28V5.72a1 1 0 011.383-.976l6.637 3.318a.5.5 0 010 .876l-6.637 3.318z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M2 13a1 1 0 001 1h2.172a2 2 0 011.414.586l5.586 5.586a1 1 0 001.414 0l.707-.707a1 1 0 000-1.414L12 12.586V10a1 1 0 00-.293-.707l-5.586-5.586A2 2 0 015.172 3H3a1 1 0 00-1 1v9zm5.586-7.586a1 1 0 00-1.414 1.414L9 9.414l1.414-1.414a1 1 0 00-1.414-1.414L9 8.586l-1.414-1.414zM10.828 13.414l1.414-1.414a1 1 0 00-1.414-1.414L9.414 12l1.414 1.414zM15 13a1 1 0 001 1h2a1 1 0 100-2h-2a1 1 0 00-1 1z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
                 <p class="text-xs mt-1">Music by <a href="https://pixabay.com/music/search/forest/" target="_blank" rel="noopener noreferrer" class="hover:underline text-green-300">Lesfm</a> via <a href="https://pixabay.com/music/" target="_blank" rel="noopener noreferrer" class="hover:underline text-green-300">Pixabay Music</a></p>
             </div>
         </div>
     </footer>
+    
+    <!-- Music notification -->
+    <div id="music-notification" class="fixed bottom-4 left-4 z-50 p-4 bg-green-800 text-white text-sm rounded-lg shadow-xl flex items-center space-x-3 transition-transform duration-500 transform translate-y-20 opacity-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-300" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+        </svg>
+        <span>Now playing: **Forest Lullaby** by Lesfm.</span>
+        <button id="close-notification" class="text-green-300 hover:text-white transition focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
 
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ease-in-out hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-700" aria-label="Scroll back to top">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -439,6 +473,98 @@
                 behavior: 'smooth' // Smooth scroll to top
             });
         });
+
+        // Audio controls functionality
+        const audio = document.getElementById('background-audio');
+        const playPauseButton = document.getElementById('play-pause-button');
+        const muteUnmuteButton = document.getElementById('mute-unmute-button');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+        const muteIcon = document.getElementById('mute-icon');
+        const unmuteIcon = document.getElementById('unmute-icon');
+
+        // Initial state
+        let isPlaying = false;
+        let isMuted = false; // Audio starts unmuted at a low volume
+        let lastVolume = 0.2; // Store the last non-muted volume
+
+        // Function to toggle play/pause
+        function togglePlayPause() {
+            if (isPlaying) {
+                audio.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            } else {
+                audio.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Function to toggle mute/unmute
+        function toggleMuteUnmute() {
+            if (isMuted) {
+                audio.volume = lastVolume; // Restore to the last volume
+                audio.muted = false;
+                muteIcon.classList.add('hidden');
+                unmuteIcon.classList.remove('hidden');
+            } else {
+                lastVolume = audio.volume; // Save the current volume before muting
+                audio.muted = true;
+                muteIcon.classList.remove('hidden');
+                unmuteIcon.classList.add('hidden');
+            }
+            isMuted = !isMuted;
+        }
+        
+        // Music notification functionality
+        const musicNotification = document.getElementById('music-notification');
+        const closeNotificationButton = document.getElementById('close-notification');
+
+        function showNotification() {
+            musicNotification.classList.remove('translate-y-20', 'opacity-0');
+            musicNotification.classList.add('translate-y-0', 'opacity-100');
+            // Hide the notification after 10 seconds
+            setTimeout(() => {
+                hideNotification();
+            }, 10000);
+        }
+
+        function hideNotification() {
+            musicNotification.classList.remove('translate-y-0', 'opacity-100');
+            musicNotification.classList.add('translate-y-20', 'opacity-0');
+        }
+
+        closeNotificationButton.addEventListener('click', hideNotification);
+
+        window.onload = function () {
+            // Wait for the window to load before attempting to play audio
+            const playPromise = audio.play();
+
+            // Some browsers may still block autoplay. Check for this.
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started successfully
+                    audio.volume = 0.2; // Start with a low volume
+                    isPlaying = true;
+                    // Update UI to show pause icon and unmute icon
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    muteIcon.classList.add('hidden');
+                    unmuteIcon.classList.remove('hidden');
+                    showNotification(); // Show the notification
+                }).catch(error => {
+                    // Autoplay was prevented. User interaction is required.
+                    // The audio element is already in a paused state, so the UI is correct.
+                    console.log("Autoplay was prevented. User needs to interact to play audio.");
+                });
+            }
+        };
+
+        playPauseButton.addEventListener('click', togglePlayPause);
+        muteUnmuteButton.addEventListener('click', toggleMuteUnmute);
+        
     </script>
 </body>
 </html>
