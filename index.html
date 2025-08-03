@@ -29,9 +29,9 @@
     <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Alexia's Organic Farm" />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <meta name="apple-mobile-web-app-title" content="Alexia's Organic Farm" />
     <meta property="og:title" content="Alexia's Organic Farm | A Forest in the Making in Beltangadi">
     <meta property="og:description" content="Visit Alexia's Organic Farm, a tranquil forest garden in Beltangadi. Find rest, wonder, and the chance to feel human again.">
     <meta property="og:image" content="https://alexiasorganicfarm.com/social-preview.jpg">
@@ -378,9 +378,18 @@
     </section>
 
     <footer class="bg-green-800 text-white py-6 px-6 text-center rounded-t-xl mt-6">
-        <div class="container mx-auto">
-            <p>© <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
-            <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p class="text-lg">&copy; <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
+            <p class="text-sm mt-2 md:mt-0 md:ml-4">Cultivating nature, inspiring experiences.</p>
+            <!-- Audio Player with Credits -->
+            <div class="w-full md:w-auto">
+                <p class="text-sm mb-2">Now playing: Forest Lullaby</p>
+                <audio controls loop autoplay class="w-full md:w-64">
+                    <source src="forest-lullaby.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-xs mt-1">Music by <a href="https://pixabay.com/music/search/forest/" target="_blank" rel="noopener noreferrer" class="hover:underline text-green-300">Lesfm</a> via <a href="https://pixabay.com/music/" target="_blank" rel="noopener noreferrer" class="hover:underline text-green-300">Pixabay Music</a></p>
+            </div>
         </div>
     </footer>
 
