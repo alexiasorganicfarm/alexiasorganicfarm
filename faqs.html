@@ -133,15 +133,28 @@
             padding: 1rem;
             background-color: #e9f5e9;
             border-bottom: 1px solid #d1e7dd;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-question:hover {
+            background-color: #dcfce7;
+        }
+        .faq-question.expanded {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease-out;
             padding: 0 1rem;
+            background-color: #f8fafc;
+            border: 1px solid #d1e7dd;
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
         }
         .faq-answer.show {
-            max-height: 200px; /* Adjust as needed */
+            max-height: 1000px; /* Adjust max-height to a large enough value to accommodate all content */
             padding: 1rem;
             transition: max-height 0.5s ease-in, padding 0.5s ease-in;
         }
@@ -150,6 +163,12 @@
         }
         .faq-question.expanded .faq-icon {
             transform: rotate(180deg);
+        }
+        /* Style for the FAQ content itself */
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
     </style>
 </head>
@@ -162,7 +181,7 @@
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <!-- The logo now links to the #home anchor using smooth scrolling -->
-            <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
+            <a href="#home" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
                 <!-- Replace 'your-github-raw-link-to-logo.jpg' with the actual URL from your GitHub repository -->
                 <img src="./logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
             </a>
@@ -173,7 +192,7 @@
             <nav id="main-nav" class="mobile-menu-hidden md:flex">
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
                     <!-- New 'Home' navigation link for easy access -->
-                    <li role="none"><a href="index.html" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#home" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Home</a></li>
                     <li role="none"><a href="#why-visit" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
                     <li role="none"><a href="#plan-your-visit" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
                     <li role="none"><a href="#faqs" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">FAQs</a></li>
@@ -286,30 +305,21 @@
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: We cultivate a wide range of produce, including seasonal fruits, vegetables, and spices. Our focus is on growing native and traditional varieties that are well-suited to the local climate.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
-                            <span class="font-semibold text-gray-800">Q: Do you offer farm stays?</span>
-                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: While we don't currently offer traditional farm stays, we are exploring options for immersive workshops and retreats in the future. Please follow our updates on social media or subscribe to our newsletter for the latest information.</p>
+                            <p class="py-4">A: We cultivate a wide range of produce, including seasonal fruits, vegetables, and spices. We focus on native and climate-resilient crops that thrive in our local environment.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Other FAQs converted to accordion style -->
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Booking & Visits</h3>
-                <div class="space-y-4">
+                <!-- Booking & Visits -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Booking & Visits</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: How do I book a visit?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Please book your visit at least 2 days ahead using our [booking page/contact form].</p>
+                            <p class="py-4">A: Please book your visit at least 2 days ahead by contacting us via phone or email, which you can find on our contact page. We keep visits personal and peaceful, so we operate on an appointment-only basis.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -318,16 +328,7 @@
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: The fee is ₹50 per visitor aged 18 and above. Visitors under 18 enter free.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
-                            <span class="font-semibold text-gray-800">Q: Why do visitors under 18 get free entry?</span>
-                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: We believe in nurturing a deep connection with nature from a young age. Offering free entry to visitors under 18 encourages families to visit together, helps children experience the beauty of the farm, and supports the next generation in valuing sustainable living. It’s our way of welcoming young hearts to grow alongside the forest.</p>
+                            <p class="py-4">A: The fee is ₹50 per visitor aged 18 and above. Visitors under 18 enter free. This modest contribution helps us maintain and care for the farm.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -336,7 +337,7 @@
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Please notify us at least 24 hours ahead if you need to cancel.</p>
+                            <p class="py-4">A: Please notify us at least 24 hours ahead if you need to cancel or reschedule your visit.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -345,114 +346,198 @@
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Contact us immediately. Visits may be rescheduled for safety.</p>
+                            <p class="py-4">A: Please contact us immediately if you are concerned about the weather. Visits may be rescheduled for your safety and comfort.</p>
                         </div>
                     </div>
                 </div>
                 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Visitors & Pets</h3>
-                <div class="space-y-4">
+                <!-- Visitors & Pets -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Visitors & Pets</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Can I bring children or pets?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Children are welcome with adult supervision. Pets are welcome too, with a ₹50 pet entry fee. Please keep pets on a leash and clean up after them.</p>
+                            <p class="py-4">A: Children are welcome with adult supervision. Pets are also welcome with a ₹50 pet entry fee. For the safety of everyone and the farm's wildlife, please keep pets on a leash at all times and clean up after them.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Safety & Responsibility</h3>
-                <div class="space-y-4">
+                <!-- Professional Photography & Videography -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Professional Photography & Videography</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I take professional photos or videos at the farm?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Yes. We welcome artists, photographers, and storytellers who wish to capture the farm’s quiet beauty.</p>
+                            <ul class="list-disc list-inside space-y-1 text-lg text-gray-600 pb-4">
+                                <li><strong>Location use:</strong> ₹500 per session (up to 4 hours)</li>
+                                <li><strong>Drone use:</strong> ₹1,000 per session (up to 4 hours, by prior permission)</li>
+                                <li><strong>Combo (Location + Drone):</strong> ₹1,400 per session (up to 4 hours)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Why is there a fee?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Your contribution helps care for the trees, nurture the soil, and keep this space peaceful for everyone.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: How can I arrange a shoot?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: All shoots are by prior booking so we can reserve a calm slot without disturbance from other visits.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Are there any guidelines?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Yes, we simply ask that you:</p>
+                            <ul class="list-disc list-inside space-y-1 text-lg text-gray-600 pb-4">
+                                <li>Treat every tree, plant, and creature with care.</li>
+                                <li>Take back everything you bring.</li>
+                                <li>Keep voices and music gentle.</li>
+                                <li>Wrap up within your booked time.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety & Responsibility -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Safety & Responsibility</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Is the farm safe? Who’s responsible for accidents?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: The farm is natural terrain with active farming. Please stay on paths and supervise your group. You are responsible for your own safety.</p>
+                            <p class="py-4">A: The farm is natural terrain with active farming. Please stay on designated paths and supervise your group at all times. You are responsible for your own safety and that of your group during the visit.</p>
                         </div>
                     </div>
                 </div>
                 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Health & Comfort</h3>
-                <div class="space-y-4">
+                <!-- Health & Comfort -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Health & Comfort</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Should I prepare for allergies or insects?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Yes. Bring insect repellent and take precautions if you have allergies.</p>
+                            <p class="py-4">A: As it is a natural, outdoor environment, we recommend bringing insect repellent and taking any necessary precautions if you have allergies to pollen, plants, or insects.</p>
                         </div>
                     </div>
                 </div>
                 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Enjoying the Farm’s Bounty</h3>
-                <div class="space-y-4">
+                <!-- Enjoying the Farm’s Bounty -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Enjoying the Farm’s Bounty</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Can I pick fruits or plants?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Please ask before picking anything. We want to make sure there’s plenty for everyone.</p>
+                            <p class="py-4">A: Please ask a staff member before picking anything. We want to ensure there is plenty for everyone and that you're picking what's ripe and ready.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Accessibility</h3>
-                <div class="space-y-4">
+                <!-- Accessibility -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Accessibility</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Is the farm wheelchair accessible?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Not yet, but we have resting areas and can assist if you get in touch beforehand.</p>
+                            <p class="py-4">A: Not yet, as the terrain is natural and uneven. However, we have resting areas and can provide assistance if you get in touch beforehand to let us know your needs.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Photography & Social Media</h3>
-                <div class="space-y-4">
+                <!-- Photography & Social Media (old)-->
+                <div class="space-y-4 mt-8" style="display:none;">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Photography & Social Media</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Can I take photos and share them?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Absolutely! Please tag us to share your experience.</p>
+                            <p class="py-4">A: Absolutely! We love seeing our visitors enjoy the farm. Please feel free to take as many photos as you like and tag us on social media to share your experience!</p>
                         </div>
                     </div>
                 </div>
-
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Volunteer & Internship Opportunities</h3>
-                <div class="space-y-4">
+                
+                <!-- Volunteer & Internship Opportunities -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Volunteer & Internship Opportunities</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: Can I volunteer or intern?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: We’re planning this. Stay tuned!</p>
+                            <p class="py-4">A: We are currently planning to introduce volunteer and internship programs to help with our forest dream. Please stay tuned to our social media channels or contact us for future updates!</p>
                         </div>
                     </div>
                 </div>
-
-                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Contact & Emergencies</h3>
-                <div class="space-y-4">
+                
+                <!-- Contact & Emergencies -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Contact & Emergencies</h3>
                     <div class="faq-item">
                         <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
                             <span class="font-semibold text-gray-800">Q: How do I contact you?</span>
                             <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
-                            <p class="py-4">A: Phone: <a href="tel:+917619631892" class="text-custom-green hover:underline">+91 (761) 963-1892</a> | Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-custom-green hover:underline">alexiasorganicfarm@gmail.com</a></p>
+                            <p class="py-4">A: Phone: <a href="tel:+917619631892" class="text-custom-green hover:underline">+91 (761) 963-1892</a> | Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-custom-green hover:underline">alexiasorganicfarm@gmail.com</a>. You can also reach us via the contact form on our website.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-t-2 border-green-200">
+        
+        <!-- Social Media Section -->
+        <section id="social-media" class="mb-12 text-center bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="social-media-heading">
+            <h2 id="social-media-heading" class="text-3xl font-semibold text-gray-800 mb-8">Social Media Invitation</h2>
+            <div class="p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">🌿 Capture the Quiet at Alexia’s Organic Farm</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    If your heart seeks stillness and your lens seeks beauty, our gates are open.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg text-gray-600 mb-6">
+                    <p class="text-xl md:text-2xl font-bold">📍 Location use: <span class="text-custom-green">₹500</span> (up to 4 hrs)</p>
+                    <p class="text-xl md:text-2xl font-bold">🚁 Drone use: <span class="text-custom-green">₹1,000</span> (up to 4 hrs, with permission)</p>
+                    <p class="text-xl md:text-2xl font-bold">🎯 Combo (Location + Drone): <span class="text-custom-green">₹1,400</span> (up to 4 hrs)</p>
+                </div>
+                <p class="text-lg text-gray-600 mb-4">
+                    📅 By booking only — so your moments remain undisturbed.
+                </p>
+                <p class="italic text-gray-600 text-xl">
+                    Come, create gently. Leave only footprints. Carry away light, leaves, and a little more peace in your heart.
+                </p>
             </div>
         </section>
 
@@ -478,7 +563,7 @@
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Find Us on Google Maps</h3>
                     <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia&#39;s%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" 
                             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             class="absolute top-0 left-0 w-full h-full rounded-md shadow-lg">
                         </iframe>
@@ -502,37 +587,37 @@
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
-    <!-- Scripts with 'defer' attribute for performance -->
-    <script defer>
-        // A simple debounce utility function to limit how often an event handler is called.
-        function debounce(func, wait) {
+    <!-- Scripts -->
+    <script>
+        // Debounce function to limit the rate of function calls
+        function debounce(func, delay) {
             let timeout;
             return function(...args) {
-                const context = this;
                 clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(context, args), wait);
+                timeout = setTimeout(() => func.apply(this, args), delay);
             };
         }
 
-        // Smooth scrolling for anchor links, now with a check to prevent it on external links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Check if the link is an internal anchor
-                if (this.hash !== '') {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(this.hash);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        // For accessibility, focus the target element after scrolling
-                        targetElement.focus();
-                    }
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu if open
+                if (mainNav.classList.contains('mobile-menu-visible')) {
+                    mainNav.classList.remove('mobile-menu-visible');
+                    mainNav.classList.add('mobile-menu-hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
                 }
             });
         });
 
-        // Mobile menu toggle with improved accessibility attributes
+        // Mobile menu toggle with accessibility
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mainNav = document.getElementById('main-nav');
         mobileMenuButton.addEventListener('click', () => {
@@ -542,18 +627,7 @@
             mainNav.classList.toggle('mobile-menu-visible');
         });
 
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#main-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('mobile-menu-visible')) {
-                    mainNav.classList.remove('mobile-menu-visible');
-                    mainNav.classList.add('mobile-menu-hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Back to top button visibility and click, with debounced scroll event
+        // Back to top button visibility and click
         const backToTopButton = document.getElementById('back-to-top');
         const handleScroll = () => {
             if (window.scrollY > 300) {
