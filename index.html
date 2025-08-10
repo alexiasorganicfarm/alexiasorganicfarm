@@ -102,7 +102,6 @@
     <style>
         /* Custom styles for the hero section background image */
         .hero-section {
-            /* This URL was updated to use the file you provided */
             background-image: url('main-bg.webp');
             background-size: cover;
             background-position: center;
@@ -169,7 +168,7 @@
 <body class="antialiased font-inter">
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <a href="https://alexiasorganicfarm.com/#home" class="flex items-center space-x-3 mb-2 md:mb-0">
+            <a href="#home" class="flex items-center space-x-3 mb-2 md:mb-0">
                 <img src="logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/96x96/d4edda/000000?text=Logo';" loading="lazy" />
             </a>
             <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6">
@@ -179,11 +178,12 @@
                     <li><a href="#home" class="hover:text-green-200 transition text-lg font-medium">Home</a></li>
                     <li><a href="#about" class="hover:text-green-200 transition text-lg font-medium">About Our Farm</a></li>
                     <li><a href="#sustainability" class="hover:text-green-200 transition text-lg font-medium">Sustaining the Farm</a></li>
-                    <li><a href="#experiences" class="hover:text-green-200 transition text-lg font-medium">Farm Offerings</a></li>
+                    <li><a href="#offerings" class="hover:text-green-200 transition text-lg font-medium">Farm Offerings</a></li>
                     <li><a href="#testimonials" class="hover:text-green-200 transition text-lg font-medium">Testimonials</a></li>
                     <li><a href="farm-gallery.html" class="hover:text-green-200 transition text-lg font-medium">Gallery</a></li>
                     <li><a href="#produce" class="hover:text-green-200 transition text-lg font-medium">Fresh Produce</a></li>
-                    <li><a href="#contact" class="hover:text-green-200 transition text-lg font-medium">Contact & Visit</a></li>
+                    <li><a href="faqs.html" class="hover:text-green-200 transition text-lg font-medium">FAQ</a></li>
+                    <li><a href="#contact-visit" class="hover:text-green-200 transition text-lg font-medium">Contact & Visit</a></li>
                 </ul>
             </nav>
         </div>
@@ -232,174 +232,178 @@
             </div>
         </div>
     </section>
-    <section id="experiences" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+    
+    <section id="offerings" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-6xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-6">Our Farm Offerings </h2>
-            <p class="text-lg text-gray-700 mb-4">Discover unique opportunities to connect with nature.</p>
-            <p class="text-lg text-gray-700 mb-10 font-semibold">At Alexia’s Organic Farm, we believe in sharing, not selling. Our experiences are offered on a contribution basis, reflecting our dream of building a sustainable and welcoming community. All visits are by prior appointment — please email us to plan your time here.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Our Farm Offerings</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">Discover unique opportunities to connect with nature.</p>
+            <p class="text-lg text-gray-700 mb-12 max-w-4xl mx-auto italic">At Alexia’s Organic Farm, we believe in sharing, not selling. Our experiences are offered on a contribution basis, reflecting our dream of building a sustainable and welcoming community. All visits are by prior appointment — please email us to plan your time here.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
+                <!-- Card 1: Nature Walk & Photography -->
                 <div class="experience-card">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">🌿 Nature Walk & Photography</h3>
-                    <p class="text-gray-800 mb-4">Wander through scenic paths, spot birds, and capture the biodiversity and serene landscapes of the farm.</p>
-                    <ul class="text-sm text-gray-800 list-disc list-inside mb-4 text-left mx-auto max-w-fit">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🌿 Nature Walk & Photography</h3>
+                    <p class="text-gray-600 mb-2">Wander through scenic paths, spot birds, and capture the biodiversity and serene landscapes of the farm.</p>
+                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
                         <li>Self-guided or with a guide</li>
                         <li>Ideal for photography enthusiasts</li>
                     </ul>
-                    <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">📩 Inquire About a Visit</a>
+                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About a Visit</a>
                 </div>
-
+                <!-- Card 2: Guided Farm Tour -->
                 <div class="experience-card">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">🌱 Guided Farm Tour</h3>
-                    <p class="text-gray-800 mb-4">Explore our lush 5-acre farm with a knowledgeable guide. Learn about organic farming practices, native plants, and our journey toward sustainability.</p>
-                    <ul class="text-sm text-gray-800 list-disc list-inside mb-4 text-left mx-auto max-w-fit">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🌱 Guided Farm Tour</h3>
+                    <p class="text-gray-600 mb-2">Explore our lush 5-acre farm with a knowledgeable guide. Learn about organic farming practices, native plants, and our journey toward sustainability.</p>
+                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
                         <li>Duration: ~1.5 to 2 hours</li>
                         <li>Suitable for all ages</li>
                     </ul>
-                    <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">📩 Connect for a Visit</a>
+                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Connect for a Visit</a>
                 </div>
-
+                <!-- Card 3: Seasonal Harvest Experience -->
                 <div class="experience-card">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">🍇 Seasonal Harvest Experience</h3>
-                    <p class="text-gray-800 mb-4">Take part in harvesting fresh, seasonal fruits or vegetables — a hands-on way to connect with where your food comes from.</p>
-                    <ul class="text-sm text-gray-800 list-disc list-inside mb-4 text-left mx-auto max-w-fit">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🍇 Seasonal Harvest Experience</h3>
+                    <p class="text-gray-600 mb-2">Take part in harvesting fresh, seasonal fruits or vegetables — a hands-on way to connect with where your food comes from.</p>
+                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
                         <li>Availability depends on the season</li>
                         <li>Great for families and small groups</li>
                     </ul>
-                    <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">📩 Inquire About This</a>
+                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About This</a>
                 </div>
-
+                <!-- Card 4: Picnic & Relaxation -->
                 <div class="experience-card">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">🧺 Picnic & Relaxation</h3>
-                    <p class="text-gray-800 mb-4">Find a peaceful spot near the pond or under a shaded tree. Bring your own lunch and enjoy quiet time surrounded by nature.</p>
-                    <ul class="text-sm text-gray-800 list-disc list-inside mb-4 text-left mx-auto max-w-fit">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🧺 Picnic & Relaxation</h3>
+                    <p class="text-gray-600 mb-2">Find a peaceful spot near the pond or under a shaded tree. Bring your own lunch and enjoy quiet time surrounded by nature.</p>
+                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
                         <li>Bring your own picnic</li>
                         <li>Perfect for a mindful escape</li>
                     </ul>
-                    <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">📩 Plan Your Quiet Time</a>
+                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Plan Your Quiet Time</a>
                 </div>
             </div>
-            <p class="text-lg text-gray-700 mt-10">✨ Group experiences and custom packages for schools or organizations are available on request.</p>
+            <p class="text-lg text-gray-700 mt-8">✨ Group experiences and custom packages for schools or organizations are available on request.</p>
         </div>
     </section>
 
-    <section id="testimonials" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
-        <div class="container mx-auto text-center max-w-5xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-8">What Our Visitors Feel</h2>
-            <p class="text-lg text-gray-700 mb-8">We're grateful for the kind words shared by our visitors. You can share your experience with us by emailing us at <a href="mailto:alexiasorganicfarm@gmail.com" class="text-green-600 hover:underline">alexiasorganicfarm@gmail.com</a>.</p>
-            <!-- Testimonials have been removed as requested -->
-            <div class="mt-8">
-                <a href="mailto:alexiasorganicfarm@gmail.com?subject=My%20Experience%20at%20Alexia's%20Organic%20Farm&body=Hello%20Alexia's%20Organic%20Farm%20Team,%0A%0AI'd%20love%20to%20share%20my%20experience%20at%20your%20farm!%0A%0A[Your%20Testimonial%20Here]%0A%0AThank%20you!" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition inline-block">Share Your Experience!</a>
+    <section id="testimonials" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">What Our Visitors Feel</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">We're grateful for the kind words shared by our visitors. You can share your experience with us by emailing us at <a href="mailto:alexiasorganicfarm@gmail.com" class="text-green-600 hover:underline">alexiasorganicfarm@gmail.com</a>.</p>
+            <a href="mailto:alexiasorganicfarm@gmail.com" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Share Your Experience!</a>
+        </div>
+    </section>
+
+    <section id="news" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Latest News & Farm Updates</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Stay up-to-date with what's happening at Alexia's Organic Farm!</p>
+            <div class="p-6 bg-green-50 rounded-xl shadow-md border border-green-200 mb-8">
+                <h3 class="text-2xl font-semibold text-green-700 mb-2">Monsoon Planting Season Begins!</h3>
+                <p class="text-gray-600 text-sm mb-4">July 25, 2025</p>
+                <p class="text-lg text-gray-700 mb-4">We're excited to announce the start of our monsoon planting! Learn about the new crops we're introducing this season and how we're preparing for a bountiful harvest.</p>
+                <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline font-bold transition">Read More on Instagram</a>
+            </div>
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold text-green-700 mb-4">See More of Our Farm!</h3>
+                <p class="text-lg text-gray-700 mb-4">Click below to view our full photo gallery and get a glimpse of life at Alexia's Organic Farm.</p>
+                <a href="farm-gallery.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">View Farm Photo Gallery</a>
             </div>
         </div>
     </section>
 
-    <section id="news-updates" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
+    <!-- New FAQ section in the body -->
+    <section id="faq-body-link" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-8">Latest News & Farm Updates</h2>
-            <p class="text-lg text-gray-700 mb-8">Stay up-to-date with what's happening at Alexia's Organic Farm!</p>
-            <div class="text-left bg-white p-6 rounded-xl shadow-md border border-green-200">
-                <h3 class="text-2xl font-bold text-green-700 mb-2">Monsoon Planting Season Begins!</h3>
-                <p class="text-sm text-gray-500 mb-4">July 25, 2025</p>
-                <p class="text-gray-800 mb-4">We're excited to announce the start of our monsoon planting! Learn about the new crops we're introducing this season and how we're preparing for a bountiful harvest.</p>
-                <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">Read More on Instagram</a>
-            </div>
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Got Questions?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Find answers to frequently asked questions about our farm, offerings, and how to visit.</p>
+            <a href="faqs.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Read Our FAQs</a>
+        </div>
+    </section>
+    
+    <section id="instagram-connect" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Connect With Us on Instagram</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Visit our Instagram profile to see daily updates, behind-the-scenes glimpses, and beautiful photos from Alexia's Organic Farm!</p>
+            <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Visit Our Instagram Profile</a>
         </div>
     </section>
 
-    <section id="gallery-link-section" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+    <section id="produce" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-8">See More of Our Farm!</h2>
-            <p class="text-lg text-gray-700 mb-8">Click below to view our full photo gallery and get a glimpse of life at Alexia's Organic Farm.</p>
-            <a href="farm-gallery.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">View Farm Photo Gallery</a>
-        </div>
-    </section>
-
-    <section id="instagram-link" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
-        <div class="container mx-auto text-center max-w-5xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-8">Connect With Us on Instagram</h2>
-            <p class="text-lg text-gray-700 mb-8">Visit our Instagram profile to see daily updates, behind-the-scenes glimpses, and beautiful photos from Alexia's Organic Farm!</p>
-
-            <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Visit Our Instagram Profile</a>
-        </div>
-    </section>
-    <section id="produce" class="py-16 px-6 bg-green-700 text-white rounded-xl shadow-lg m-6">
-        <div class="container mx-auto text-center max-w-4xl">
-            <h2 class="text-4xl font-bold mb-8">Farm Fresh Produce</h2>
-            <p class="text-lg mb-8">Enjoy seasonal fruits, nuts, and spices fresh from our farm.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-semibold mb-4">What's in Season?</h3>
-                    <ul class="text-lg list-disc list-inside text-left">
+            <h2 class="text-4xl font-bold text-green-800 mb-8">🌱 Farm Fresh Produce</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Enjoy seasonal fruits, nuts, and spices fresh from our farm.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 mb-8 text-center">
+                <!-- What's in Season -->
+                <div class="p-4 bg-white rounded-xl shadow-md border border-green-200">
+                    <h3 class="text-xl font-semibold text-green-700">What's in Season?</h3>
+                    <ul class="list-disc list-inside text-gray-600 mt-2 text-left pl-4">
                         <li>Jackfruit, Mango, Jamun (seasonal)</li>
                         <li>Bananas, Coconuts (year-round)</li>
                         <li>Cashews, Cinnamon, Vegetables</li>
                         <li>Kokum, Pepper, Arecanut</li>
                     </ul>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-semibold mb-4">How to Buy</h3>
-                    <p class="text-lg mb-4">Contact us via email or WhatsApp to book a purchase appointment. We ensure you get the freshest produce directly from our farm.</p>
-                    <p class="text-lg">Support local farming and eat fresh!</p>
+                <!-- How to Buy -->
+                <div class="p-4 bg-white rounded-xl shadow-md border border-green-200">
+                    <h3 class="text-xl font-semibold text-green-700">How to Buy</h3>
+                    <p class="text-gray-600 mt-2">Contact us via email or WhatsApp to book a purchase appointment. We ensure you get the freshest produce directly from our farm.</p>
+                    <p class="font-semibold text-green-700 mt-4">Support local farming and eat fresh!</p>
                 </div>
             </div>
-            <a href="#contact" class="bg-white text-green-700 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition mt-10 inline-block">Inquire About Produce</a>
+            <a href="#contact-visit" class="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Inquire About Produce</a>
         </div>
     </section>
 
-    <section id="contact" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
-        <div class="container mx-auto text-center max-w-3xl">
-            <h2 class="text-4xl font-bold text-green-800 mb-8">Contact & Visit Us</h2>
-            <p class="text-lg text-gray-700 mb-8">Ready to experience Alexia's Organic Farm? Get in touch to schedule your visit or inquiry!</p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                <div class="text-center bg-white p-6 rounded-xl shadow-md w-full md:w-1/2 border border-green-200">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Reach Out</h3>
-                    <p class="text-lg mb-2">Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-green-600 hover:underline font-medium">alexiasorganicfarm@gmail.com</a></p>
-                    <p class="text-lg mb-2">WhatsApp: <a href="https://wa.me/917619631892" class="text-green-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">+91 (761) 963-1892</a></p>
-                    <p class="text-lg">Address: Alexia's Organic Farm, 27FX+5X, Chandukuru, Karnataka 574214, India</p>
+    <section id="contact-visit" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Contact & Visit Us</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Ready to experience Alexia's Organic Farm? Get in touch to schedule your visit or inquiry!</p>
+            <div class="bg-green-50 p-8 rounded-xl shadow-md border border-green-200">
+                <a href="#contact-visit" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition mb-6">Reach Out</a>
+                <p class="text-lg text-gray-800 mb-4">✉️ <span class="font-semibold">Email:</span> <a href="mailto:alexiasorganicfarm@gmail.com" class="text-green-600 hover:underline">alexiasorganicfarm@gmail.com</a></p>
+                <p class="text-lg text-gray-800 mb-4">📞 <span class="font-semibold">WhatsApp:</span> <a href="https://wa.me/917619631892" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">+91 (761) 963-1892</a></p>
+                <p class="text-lg text-gray-800 mb-4">📍 <span class="font-semibold">Address:</span> Alexia's Organic Farm, 27FX+5X, Chandukuru, Karnataka 574214, India</p>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Business Hours</h3>
+                    <p class="text-lg text-gray-800">Monday - Saturday: <span class="font-semibold">9:00 AM - 5:00 PM</span></p>
+                    <p class="text-lg text-gray-800">Sunday: <span class="font-semibold">Closed</span> (or by special appointment)</p>
                 </div>
-                <div class="text-center bg-white p-6 rounded-xl shadow-md w-full md:w-1/2 border border-green-200">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Business Hours</h3>
-                    <p class="text-lg mb-2">Monday - Saturday: <span class="font-medium">9:00 AM - 5:00 PM</span></p>
-                    <p class="text-lg">Sunday: Closed (or by special appointment)</p>
-                </div>
-            </div>
-            <div class="mt-10">
-                <h3 class="text-2xl font-semibold text-green-700 mb-4">Find Us on Google Maps</h3>
-                <div class="relative w-full" style="padding-bottom: 75%;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1753530243709!5m2!1sen!2sae"
-                        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Alexia's Organic Farm on Google Maps"
-                    ></iframe>
-                </div>
+                <a href="https://maps.app.goo.gl/xV9YjV5MhG6e3P28A" target="_blank" rel="noopener noreferrer" class="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Find Us on Google Maps</a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-green-800 text-white py-6 px-6 text-center rounded-t-xl mt-6">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <p class="text-lg">© <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
-            <p class="text-sm">Cultivating nature, inspiring experiences.</p>
+    <footer class="bg-green-800 text-white py-8 px-6 rounded-t-xl mt-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
+            <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-2xl hover:text-green-300 transition-colors">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.65.051 1.155.06 1.956.242 2.597.497.64.256 1.144.607 1.575 1.037.43.43.78.935 1.036 1.576.257.64.438 1.442.498 2.597.041.933.05 1.217.05 3.65s-.01 2.715-.051 3.65c-.06 1.155-.242 1.956-.497 2.597-.256.64-.607 1.144-1.037 1.575-.43.43-.935.78-1.576 1.036-.64.257-1.442.438-2.597.498-.933.041-1.217.05-3.65.05s-2.715-.01-3.65-.051c-1.155-.06-1.956-.242-2.597-.497-.64-.256-1.144-.607-1.575-1.037-.43-.43-.78-.935-1.036-1.576-.257-.64-.438-1.442-.498-2.597-.041-.933-.05-1.217-.05-3.65s.01-2.715.051-3.65c.06-1.155.242-1.956.497-2.597.256-.64.607-1.144 1.037-1.575.43-.43.935-.78 1.576-1.036.64-.257 1.442-.438 2.597-.498.933-.041 1.217-.05 3.65-.05zm0-2c-2.673 0-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13-.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13-.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/alexiasorganicfarm" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-2xl hover:text-green-300 transition-colors">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.77-1.63 1.563V12h2.77l-.44 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </footer>
-    
-    <!-- Back to Top Button -->
-    <a href="#home" id="back-to-top" class="hidden" aria-label="Back to top">
+
+    <!-- Back to top button -->
+    <a id="back-to-top" href="#" class="fixed z-50 bottom-4 right-4 bg-green-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-green-700">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </a>
 
     <script>
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                const targetElement = document.querySelector(this.getAttribute('href'));
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
