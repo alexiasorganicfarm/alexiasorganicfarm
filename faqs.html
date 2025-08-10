@@ -108,8 +108,10 @@
     <!-- Header Section -->
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo is already wrapped in a link to the home page -->
             <a href="https://alexiasorganicfarm.com/#home" class="flex items-center space-x-3 mb-2 md:mb-0">
-                <img src="https://placehold.co/96x96/d4edda/000000?text=Logo" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
+                <!-- Replace 'your-github-raw-link-to-logo.jpg' with the actual URL from your GitHub repository -->
+                <img src="./logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
             </a>
             <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6">
                 ☰
@@ -183,14 +185,26 @@
 
         <hr class="my-12 border-t-2 border-green-200">
 
-        <!-- FAQ Section -->
+        <!-- FAQ Section (Combined Content) -->
         <section id="faqs" class="mb-12 bg-white rounded-xl shadow-lg m-6 p-6 md:p-8">
             <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">Frequently Asked Questions</h2>
             <div class="p-6 md:p-8 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Booking & Visits</h3>
+                <!-- New FAQs -->
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Our Vision & Practices</h3>
+                <div class="space-y-4 text-lg text-gray-600">
+                    <p><strong class="font-semibold">Q: What is the "forest dream"?</strong><br>A: The "forest dream" is our long-term vision to transform our 5-acre land into a thriving, self-sustaining forest garden. We are working to create a diverse ecosystem with a wide variety of native trees, fruit trees, and medicinal plants, all cultivated using organic and permaculture principles.</p>
+                    <p><strong class="font-semibold">Q: Do you use pesticides or chemical fertilizers?</strong><br>A: No, we are a completely organic farm. We are dedicated to sustainable farming practices and do not use any chemical pesticides, herbicides, or synthetic fertilizers. We believe in working with nature, not against it, to produce healthy and wholesome produce.</p>
+                    <p><strong class="font-semibold">Q: Can we visit the farm?</strong><br>A: Yes, we welcome visitors! We offer guided tours to explain our farming methods and the vision behind our forest dream. You can learn more about our visiting hours and book a tour through our contact page.</p>
+                    <p><strong class="font-semibold">Q: What kind of produce do you grow?</strong><br>A: We cultivate a wide range of produce, including seasonal fruits, vegetables, and spices. Our focus is on growing native and traditional varieties that are well-suited to the local climate.</p>
+                    <p><strong class="font-semibold">Q: Do you offer farm stays?</strong><br>A: While we don't currently offer traditional farm stays, we are exploring options for immersive workshops and retreats in the future. Please follow our updates on social media or subscribe to our newsletter for the latest information.</p>
+                </div>
+                
+                <!-- Original FAQs -->
+                <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4">Booking & Visits</h3>
                 <div class="space-y-4 text-lg text-gray-600">
                     <p><strong class="font-semibold">Q: How do I book a visit?</strong><br>A: Please book your visit at least 2 days ahead using our [booking page/contact form].</p>
                     <p><strong class="font-semibold">Q: What is the entry fee?</strong><br>A: The fee is ₹50 per visitor aged 18 and above. Visitors under 18 enter free.</p>
+                    <p><strong class="font-semibold">Q: Why do visitors under 18 get free entry?</strong><br>A: We believe in nurturing a deep connection with nature from a young age. Offering free entry to visitors under 18 encourages families to visit together, helps children experience the beauty of the farm, and supports the next generation in valuing sustainable living. It’s our way of welcoming young hearts to grow alongside the forest.</p>
                     <p><strong class="font-semibold">Q: What is your cancellation policy?</strong><br>A: Please notify us at least 24 hours ahead if you need to cancel.</p>
                     <p><strong class="font-semibold">Q: What if there’s bad weather?</strong><br>A: Contact us immediately. Visits may be rescheduled for safety.</p>
                 </div>
@@ -234,7 +248,6 @@
                 <div class="space-y-4 text-lg text-gray-600">
                     <p><strong class="font-semibold">Q: How do I contact you?</strong><br>A: Phone: <a href="tel:+917619631892" class="text-custom-green hover:underline">+91 (761) 963-1892</a> | Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-custom-green hover:underline">alexiasorganicfarm@gmail.com</a></p>
                 </div>
-
             </div>
         </section>
 
@@ -256,10 +269,16 @@
                     <strong class="font-semibold">Instagram:</strong>
                     <a href="https://www.instagram.com/" class="text-custom-green hover:underline" target="_blank">@alexiasorganicfarm</a>
                 </p>
-                <p class="text-lg text-gray-600 mb-2">
-                    <strong class="font-semibold">Google Maps:</strong>
-                    <a href="https://maps.app.goo.gl/YourMapLink" class="text-custom-green hover:underline" target="_blank">Find Us on Google Maps</a>
-                </p>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Find Us on Google Maps</h3>
+                    <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia&#39;s%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" 
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute top-0 left-0 w-full h-full rounded-md shadow-lg">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
