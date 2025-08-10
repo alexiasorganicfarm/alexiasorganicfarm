@@ -162,7 +162,7 @@
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <!-- The logo now links to the #home anchor using smooth scrolling -->
-            <a href="#home" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
+            <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
                 <!-- Replace 'your-github-raw-link-to-logo.jpg' with the actual URL from your GitHub repository -->
                 <img src="./logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
             </a>
@@ -173,7 +173,7 @@
             <nav id="main-nav" class="mobile-menu-hidden md:flex">
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
                     <!-- New 'Home' navigation link for easy access -->
-                    <li role="none"><a href="#home" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Home</a></li>
+                    <li role="none"><a href="index.html" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Home</a></li>
                     <li role="none"><a href="#why-visit" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
                     <li role="none"><a href="#plan-your-visit" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
                     <li role="none"><a href="#faqs" class="hover:text-green-200 transition text-lg font-medium" role="menuitem">FAQs</a></li>
@@ -514,17 +514,20 @@
             };
         }
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for anchor links, now with a check to prevent it on external links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // For accessibility, focus the target element after scrolling
-                    targetElement.focus();
+                // Check if the link is an internal anchor
+                if (this.hash !== '') {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // For accessibility, focus the target element after scrolling
+                        targetElement.focus();
+                    }
                 }
             });
         });
