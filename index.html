@@ -1,4 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Google Analytics Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4P26TY8NC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,15 +19,17 @@
     <meta name="keywords" content="Alexia's Organic Farm, forest dream, organic farm Beltangadi, dakshina kannada farm visit, farm stay Mangalore, nature retreat, sustainable living, organic farming Karnataka, peaceful getaway, forest garden, farm tours" />
     <meta name="robots" content="index, follow" />
     
+    <!-- Preload critical resources -->
     <link rel="preload" href="main-bg.webp" as="image" />
+    
+    <!-- Fonts and Tailwind CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Updated favicon to logo.jpg -->
+    <!-- Favicon Links -->
     <link rel="icon" href="https://alexiasorganicfarm.com/logo.jpg" type="image/jpeg" sizes="any" />
-    <!-- You can keep other favicons if you want -->
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
@@ -35,7 +40,7 @@
 
     <meta name="apple-mobile-web-app-title" content="Alexia's Organic Farm" />
     
-    <!-- Updated Open Graph and Twitter image to logo.jpg -->
+    <!-- Open Graph and Twitter metadata for social sharing -->
     <meta property="og:title" content="Alexia's Organic Farm | A Forest in the Making in Beltangadi" />
     <meta property="og:description" content="Visit Alexia's Organic Farm, a tranquil forest garden in Beltangadi. Find rest, wonder, and the chance to feel human again." />
     <meta property="og:image" content="https://alexiasorganicfarm.com/logo.jpg" />
@@ -49,7 +54,7 @@
     <meta name="twitter:description" content="Visit Alexia's Organic Farm, a tranquil forest garden in Beltangadi. Find rest, wonder, and the chance to feel human again." />
     <meta name="twitter:image" content="https://alexiasorganicfarm.com/logo.jpg" />
 
-    <!-- Structured data JSON-LD -->
+    <!-- Structured data JSON-LD for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,31 +108,26 @@
       ]
     }
     </script>
-</head>
-
+    <!-- Custom CSS for the hero section, cards, and mobile menu -->
     <style>
-        /* Custom styles for the hero section background image */
         .hero-section {
             background-image: url('main-bg.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        /* Custom styling for experience cards */
         .experience-card {
             @apply bg-white p-6 rounded-xl shadow-md border border-green-200 transform transition duration-300 hover:scale-105 hover:shadow-lg;
         }
-        /* Custom styling for testimonial cards */
         .testimonial-card {
             @apply bg-white p-6 rounded-xl shadow-md border border-green-200 text-left;
         }
-        /* Styles for the mobile navigation toggle */
         .mobile-menu-button {
-            display: none; /* Hidden by default on larger screens */
+            display: none;
         }
-        @media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px */
+        @media (max-width: 767px) {
             .mobile-menu-button {
-                display: block; /* Show on small screens */
+                display: block;
             }
             .mobile-menu-hidden {
                 display: none;
@@ -136,33 +136,32 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                background-color: #166534; /* Darker green for mobile menu */
+                background-color: #166534;
                 position: absolute;
-                top: 100%; /* Position below header */
+                top: 100%;
                 left: 0;
                 padding: 1rem 0;
-                border-radius: 0 0 0.75rem 0.75rem; /* Rounded bottom corners */
+                border-radius: 0 0 0.75rem 0.75rem;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                z-index: 20; /* Ensure it's above other content */
+                z-index: 20;
             }
             .mobile-menu-visible li {
                 margin: 0.5rem 0;
             }
         }
-        /* Style for back to top button */
         #back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background-color: #16a34a; /* Tailwind green-600 */
+            background-color: #16a34a;
             color: white;
             padding: 0.75rem 1rem;
-            border-radius: 9999px; /* Full rounded */
+            border-radius: 9999px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: opacity 0.3s ease-in-out;
             opacity: 0;
             visibility: hidden;
-            z-index: 50; /* Ensure it's on top */
+            z-index: 50;
         }
         #back-to-top.show {
             opacity: 1;
@@ -172,13 +171,16 @@
 </head>
 
 <body class="antialiased font-inter">
+
+    <!-- Header & Navigation -->
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <a href="#home" class="flex items-center space-x-3 mb-2 md:mb-0">
                 <img src="logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/96x96/d4edda/000000?text=Logo';" loading="lazy" />
             </a>
             <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6">
-                ☰             </button>
+                ☰
+            </button>
             <nav id="main-nav" class="mobile-menu-hidden md:flex">
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
                     <li><a href="#home" class="hover:text-green-200 transition text-lg font-medium">Home</a></li>
@@ -195,6 +197,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="relative hero-section h-screen flex items-center justify-center text-center p-4">
         <div class="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
         <div class="relative z-10 text-white max-w-4xl mx-auto bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-xl shadow-2xl">
@@ -204,6 +207,7 @@
         </div>
     </section>
 
+    <!-- About Our Farm Section -->
     <section id="about" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-5xl">
             <h2 class="text-4xl font-bold text-green-800 mb-2">The Place Where the Trees Remember</h2>
@@ -223,6 +227,7 @@
         </div>
     </section>
 
+    <!-- Sustainability Section -->
     <section id="sustainability" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-8">🌿 How the Farm Sustains Itself</h2>
@@ -239,57 +244,104 @@
         </div>
     </section>
     
+    <!-- Farm Offerings Section -->
     <section id="offerings" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-6xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Our Farm Offerings</h2>
             <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">Discover unique opportunities to connect with nature.</p>
             <p class="text-lg text-gray-700 mb-12 max-w-4xl mx-auto italic">At Alexia’s Organic Farm, we believe in sharing, not selling. Our experiences are offered on a contribution basis, reflecting our dream of building a sustainable and welcoming community. All visits are by prior appointment — please email us to plan your time here.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Nature Walk & Photography -->
-                <div class="experience-card">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🌿 Nature Walk & Photography</h3>
-                    <p class="text-gray-600 mb-2">Wander through scenic paths, spot birds, and capture the biodiversity and serene landscapes of the farm.</p>
-                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
-                        <li>Self-guided or with a guide</li>
-                        <li>Ideal for photography enthusiasts</li>
-                    </ul>
-                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About a Visit</a>
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">🌿 Nature Walk & Photography</h3>
+                        <p class="text-gray-600 mb-4">Wander through scenic paths, spot birds, and capture the biodiversity and serene landscapes of the farm.</p>
+                        <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4 space-y-2">
+                            <li>Self-guided or with a guide</li>
+                            <li>Ideal for photography enthusiasts</li>
+                            <li>Duration: 1–2 hours (flexible)</li>
+                            <li>Entry fee: ₹50 per person (18+), under 18 free</li>
+                            <li>Ground photography/videography: ₹500 per session (up to 4 hrs)</li>
+                            <li>Drone photography/videography: ₹500 per session (up to 4 hrs, prior permission required)</li>
+                            <li>Full access (ground + drone): ₹900 per session (up to 4 hrs)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About a Visit</a>
                 </div>
                 <!-- Card 2: Guided Farm Tour -->
-                <div class="experience-card">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🌱 Guided Farm Tour</h3>
-                    <p class="text-gray-600 mb-2">Explore our lush 5-acre farm with a knowledgeable guide. Learn about organic farming practices, native plants, and our journey toward sustainability.</p>
-                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
-                        <li>Duration: ~1.5 to 2 hours</li>
-                        <li>Suitable for all ages</li>
-                    </ul>
-                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Connect for a Visit</a>
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">🌱 Guided Farm Tour</h3>
+                        <p class="text-gray-600 mb-4">Explore our lush 5-acre farm with a knowledgeable guide. Learn about organic farming practices, native plants, and our journey toward sustainability.</p>
+                        <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4 space-y-2">
+                            <li>Duration: ~1.5 to 2 hours</li>
+                            <li>Suitable for all ages</li>
+                            <li>Contribution: ₹150 per person (includes entry fee)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Connect for a Visit</a>
                 </div>
                 <!-- Card 3: Seasonal Harvest Experience -->
-                <div class="experience-card">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🍇 Seasonal Harvest Experience</h3>
-                    <p class="text-gray-600 mb-2">Take part in harvesting fresh, seasonal fruits or vegetables — a hands-on way to connect with where your food comes from.</p>
-                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
-                        <li>Availability depends on the season</li>
-                        <li>Great for families and small groups</li>
-                    </ul>
-                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About This</a>
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">🍇 Seasonal Harvest Experience</h3>
+                        <p class="text-gray-600 mb-4">Take part in harvesting fresh, seasonal fruits or vegetables — a hands-on way to connect with where your food comes from.</p>
+                        <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4 space-y-2">
+                            <li>Duration: 1–2 hours (seasonal)</li>
+                            <li>Availability depends on the season</li>
+                            <li>Great for families and small groups</li>
+                            <li>Included in Full-Day Visit</li>
+                        </ul>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire About This</a>
                 </div>
                 <!-- Card 4: Picnic & Relaxation -->
-                <div class="experience-card">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">🧺 Picnic & Relaxation</h3>
-                    <p class="text-gray-600 mb-2">Find a peaceful spot near the pond or under a shaded tree. Bring your own lunch and enjoy quiet time surrounded by nature.</p>
-                    <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4">
-                        <li>Bring your own picnic</li>
-                        <li>Perfect for a mindful escape</li>
-                    </ul>
-                    <a href="#contact-visit" class="inline-block mt-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Plan Your Quiet Time</a>
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">🧺 Picnic & Relaxation</h3>
+                        <p class="text-gray-600 mb-4">Find a peaceful spot near the pond or under a shaded tree. Bring your own lunch and enjoy quiet time surrounded by nature.</p>
+                        <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4 space-y-2">
+                            <li>Duration: Up to 3 hours</li>
+                            <li>Contribution: ₹100 per person (18+), under 18 free — includes site use + entry fee</li>
+                            <li>Perfect for a mindful escape</li>
+                        </ul>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Plan Your Quiet Time</a>
+                </div>
+                <!-- Card 5: Full-Day Visit -->
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">🌞 Full-Day Visit</h3>
+                        <p class="text-gray-600 mb-4">Immerse yourself in the full beauty of Alexia’s Organic Farm.</p>
+                        <ul class="list-disc list-inside text-left text-gray-600 mb-4 pl-4 space-y-2">
+                            <li>Duration: Up to 8 hours</li>
+                            <li>Contribution: ₹500 per person</li>
+                            <li>Includes:
+                                <ul class="list-circle list-inside ml-4 mt-2">
+                                    <li>Guided farm tour</li>
+                                    <li>Unlimited access to the 5-acre farm</li>
+                                    <li>Peaceful picnic spots by the pond or under shaded trees (bring your own lunch)</li>
+                                    <li>A small basket of fresh, seasonal fruits and vegetables</li>
+                                    <li>Opportunity to join seasonal harvest experiences (advance booking required)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Inquire for a Full Day</a>
+                </div>
+                <!-- Card 6: Group Experiences -->
+                <div class="experience-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">✨ Group Experiences</h3>
+                        <p class="text-gray-600 mb-4">Custom packages for schools, organizations, and special interest groups are available on request. Tell us about your group, and we can plan a unique visit!</p>
+                    </div>
+                    <a href="#contact-visit" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition">📩 Get a Custom Quote</a>
                 </div>
             </div>
-            <p class="text-lg text-gray-700 mt-8">✨ Group experiences and custom packages for schools or organizations are available on request.</p>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">What Our Visitors Feel</h2>
@@ -298,6 +350,7 @@
         </div>
     </section>
 
+    <!-- Latest News & Farm Updates Section -->
     <section id="news" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Latest News & Farm Updates</h2>
@@ -316,7 +369,7 @@
         </div>
     </section>
 
-    <!-- New FAQ section in the body -->
+    <!-- FAQ Section -->
     <section id="faq-body-link" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Got Questions?</h2>
@@ -324,7 +377,8 @@
             <a href="faqs.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Read Our FAQs</a>
         </div>
     </section>
-    
+
+    <!-- Instagram Connect Section -->
     <section id="instagram-connect" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Connect With Us on Instagram</h2>
@@ -333,6 +387,7 @@
         </div>
     </section>
 
+    <!-- Fresh Produce Section -->
     <section id="produce" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-8">🌱 Farm Fresh Produce</h2>
@@ -359,6 +414,7 @@
         </div>
     </section>
 
+    <!-- Contact & Visit Section -->
     <section id="contact-visit" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Contact & Visit Us</h2>
@@ -373,7 +429,7 @@
                     <p class="text-lg text-gray-800">Monday - Saturday: <span class="font-semibold">9:00 AM - 5:00 PM</span></p>
                     <p class="text-lg text-gray-800">Sunday: <span class="font-semibold">Closed</span> (or by special appointment)</p>
                 </div>
-                <!-- Google Map added here to show the farm's location visually -->
+                <!-- Google Map iframe -->
                 <div class="mt-8 overflow-hidden rounded-xl shadow-xl border border-green-200">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia&#39;s%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -382,6 +438,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-green-800 text-white py-8 px-6 rounded-t-xl mt-6">
         <div class="container mx-auto text-center">
             <p>&copy; <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
@@ -389,7 +446,7 @@
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-2xl hover:text-green-300 transition-colors">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.65.051 1.155.06 1.956.242 2.597.497.64.256 1.144.607 1.575 1.037.43.43.78.935 1.036 1.576.257.64.438 1.442.498 2.597.041.933.05 1.217.05 3.65s-.01 2.715-.051 3.65c-.06 1.155-.242 1.956-.497 2.597-.256.64-.607 1.144-1.037 1.575-.43.43-.935.78-1.576 1.036-.64.257-1.442.438-2.597.498-.933.041-1.217.05-3.65.05s-2.715-.01-3.65-.051c-1.155-.06-1.956-.242-2.597-.497-.64-.256-1.144-.607-1.575-1.037-.43-.43-.78-.935-1.036-1.576-.257-.64-.438-1.442-.498-2.597-.041-.933-.05-1.217-.05-3.65s.01-2.715.051-3.65c.06-1.155.242-1.956.497-2.597.256-.64.607-1.144 1.037-1.575.43-.43.935-.78 1.576-1.036.64-.257 1.442.438 2.597-.498.933-.041 1.217-.05 3.65-.05zm0-2c-2.673 0-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13-.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13-.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.65.051 1.155.06 1.956.242 2.597.497.64.256 1.144.607 1.575 1.037.43.43.78.935 1.036 1.576.257.64.438 1.442.498 2.597.041.933.05 1.217.05 3.65s-.01 2.715-.051 3.65c-.06 1.155-.242 1.956-.497 2.597-.256.64-.607 1.144-1.037 1.575-.43.43-.935.78-1.576 1.036-.64.257-1.442.438-2.597.498-.933.041-1.217.05-3.65.05s-2.715-.01-3.65-.051c-1.155-.06-1.956-.242-2.597-.497-.64-.256-1.144-.607-1.575-1.037-.43-.43-.935-.78-1.576-1.036-.257-.64-.438-1.442-.498-2.597-.041-.933-.05-1.217-.05-3.65s.01-2.715.051-3.65c.06-1.155.242-1.956.497-2.597.256-.64.607-1.144 1.037-1.575.43-.43.935-.78 1.576-1.036.64-.257 1.442.438 2.597-.498.933-.041 1.217-.05 3.65-.05zm0-2c-2.673 0-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13-.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06s-3.033.01-4.12.06c-1.07.05-1.895.234-2.56.51-.67.276-1.23.69-1.8.69-.57 0-1.13.414-1.8-.69-.665-.276-1.49-.46-2.56-.51-1.087-.05-1.447-.06-4.12-.06z" clip-rule="evenodd" />
                     </svg>
                 </a>
                 <a href="https://www.facebook.com/alexiasorganicfarm" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-2xl hover:text-green-300 transition-colors">
@@ -408,6 +465,7 @@
         </svg>
     </a>
 
+    <!-- JavaScript for interactivity -->
     <script>
         // Smooth scrolling for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
