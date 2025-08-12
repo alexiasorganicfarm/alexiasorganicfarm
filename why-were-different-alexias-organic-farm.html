@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia's Organic Farm | Why We're Different</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles from the original file, plus updated header and mobile menu styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        .bg-custom-green {
+            background-color: #4CAF50;
+        }
+        .text-custom-green {
+            color: #4CAF50;
+        }
+        .border-custom-green {
+            border-color: #4CAF50;
+        }
+        .hover-bg-custom-green:hover {
+            background-color: #45a049;
+        }
+        .icon-shadow {
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+        }
+
+        /* Styles for the mobile menu based on the attached file */
+        .mobile-menu-hidden {
+            display: none;
+        }
+        .mobile-menu-visible {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #166534;
+        }
+        .mobile-menu-button {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            .mobile-menu-visible {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: #166534;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem 0;
+                border-radius: 0 0 0.75rem 0.75rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 20;
+            }
+            .mobile-menu-visible li {
+                margin: 0.5rem 0;
+            }
+        }
+        /* New style to highlight the word "organic" */
+        .highlight-organic {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section - Updated to match the attached file's style -->
+    <header class="bg-green-700 text-white py-4 px-4 shadow-md rounded-b-xl border-b-2 border-green-800">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo - Left-aligned -->
+            <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
+                <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=LOGO" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" loading="lazy">
+            </a>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-controls="main-nav" aria-expanded="false">
+                ☰
+            </button>
+            <!-- Navigation Links -->
+            <nav id="main-nav" class="mobile-menu-hidden md:flex">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
+                    <li role="none"><a href="index.html" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
+                    <li role="none"><a href="#" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
+                    <li role="none"><a href="faqs.html" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">FAQs</a></li>
+                    <li role="none"><a href="#" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Header Section -->
+        <header class="text-center pt-8 pb-12 mb-12 md:mb-16">
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-custom-green mb-4">🌱 Why We’re Different</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto px-6 text-gray-600">
+                    Alexia’s Organic Farm isn’t built for marketing — it’s built for the future. While many farms use “<span class="highlight-organic">ORGANIC</span>” as a buzzword, we’re taking a different path — slower, quieter, and deeply honest.
+                </p>
+            </div>
+        </header>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-16 p-6">
+
+            <!-- 1. A Forest in the Making -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 4a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><path d="M12 10v12"/><path d="M12 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" transform="translate(0 6)"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">A Forest in the Making</h2>
+                        <p class="text-gray-600">We’re not just farming — we’re growing a future forest. Every tree is chosen to last generations, so one day people can walk under a cool green canopy, feeling the peace of nature.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Radical Transparency -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">Radical Transparency</h2>
+                        <p class="text-gray-600">We show our journey as it is — successes, setbacks, and all. No airbrushed marketing, just the real life of a working farm, soil under our nails and weeds in our paths.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Accessible to Everyone -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">Accessible to Everyone</h2>
+                        <p class="text-gray-600 mb-3">We believe nature shouldn’t have a high price tag. We offer free entry for children, contribution-based visits for adults, and genuine knowledge sharing instead of pricey workshops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Hands-On, Not Just a Tour -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 12.5c0-5.25-4.25-9.5-9.5-9.5S2.5 7.25 2.5 12.5c0 4.45 3.05 8.2 7.15 9.25.4.07.65-.17.65-.37v-1.5c-3 .65-3.65-1.45-3.65-1.45-.35-.9-1-1.15-1-1.15-.7-.5.05-.5.05-.5.8.05 1.2.8 1.2.8.7 1.2 1.85.85 2.3.65.05-.5.25-.85.45-1.05-1.75-.2-3.6-1.1-3.6-3.9 0-.85.3-1.55.8-2.1-.1-.2-.35-1 .05-2.05 0 0 .65-.2 2.15.8.6-.15 1.25-.25 1.9-.25s1.3.1 1.9.25c1.5-1 2.15-.8 2.15-.8.4 1.05.15 1.85.05 2.05.5.55.8 1.25.8 2.1 0 2.8-1.85 3.7-3.65 3.9.3.25.55.75.55 1.5v2.2c0 .2.25.45.65.37C18.45 20.7 21.5 16.95 21.5 12.5z"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">Hands-On, Not Just a Tour</h2>
+                        <p class="text-gray-600">You’re welcome to walk, touch, smell, plant, and harvest. This is not a show farm — it’s a living space where visitors become participants and connect with the earth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. No Certification Games -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">No Certification Games</h2>
+                        <p class="text-gray-600">We’re chemical-free by choice, not by a purchased label. Instead of chasing costly certificates, we openly share our farming practices so you can see and decide for yourself.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Family-Run and Heart-Driven -->
+            <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-custom-green icon-shadow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-custom-green mb-2">Family-Run & Heart-Driven</h2>
+                        <p class="text-gray-600">This land is cared for daily by our family with love and respect. There’s no corporate team or marketing department — just people growing food and planting trees the way it should be.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Call to Action Section -->
+        <section class="bg-custom-green text-white text-center p-8 rounded-xl my-12 mx-6">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">Ready to experience the difference?</h3>
+            <p class="mb-6 max-w-xl mx-auto">Plan your visit today and become part of our story.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:alexiasorganicfarm@gmail.com" class="bg-white text-custom-green font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors duration-300 w-full sm:w-auto">
+                    📩 Email Us
+                </a>
+                <a href="https://wa.me/917619631892" target="_blank" class="bg-white text-custom-green font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors duration-300 w-full sm:w-auto">
+                    📞 WhatsApp Us
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer / Tagline -->
+        <footer class="text-center p-8 mt-16">
+            <p class="text-lg italic text-gray-700 max-w-2xl mx-auto">
+                Alexia’s Organic Farm is a place where the land heals, people reconnect, and a forest quietly grows — one tree, one visitor, one moment at a time.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Script for mobile menu functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mainNav.classList.toggle('mobile-menu-hidden');
+                mainNav.classList.toggle('mobile-menu-visible');
+            });
+        });
+    </script>
+</body>
+</html>
