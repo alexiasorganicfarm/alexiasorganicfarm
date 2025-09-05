@@ -372,7 +372,7 @@
                 </div>
                 <!-- Google Map iframe -->
                 <div class="mt-8 overflow-hidden rounded-xl shadow-xl border border-green-200">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia&#39;s%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <a href="https://maps.app.goo.gl/7Pzx1cdKiGnvs8nP6" target="_blank" rel="noopener noreferrer" class="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Find Us on Google Maps</a>
             </div>
@@ -384,30 +384,32 @@
         <div class="container mx-auto max-w-2xl text-center">
             <h2 class="text-4xl font-bold text-green-800 mb-6">Book a Visit</h2>
             <p class="text-xl text-gray-700 mb-8">We're excited to welcome you! Please fill out the form below.</p>
-            <form action="https://formspree.io/f/your-id" method="POST" class="bg-white p-8 rounded-xl shadow-md border border-green-200 text-left space-y-6">
+            
+            <!-- ====== FORM UPDATED FOR GOOGLE SHEETS ====== -->
+            <form id="booking-form" class="bg-white p-8 rounded-xl shadow-md border border-green-200 text-left space-y-6">
                 <div>
                     <label for="name" class="block text-lg font-medium text-gray-700">Full name</label>
-                    <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <input type="text" id="name" name="entry.1169829555" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                 </div>
                 <div>
                     <label for="whatsapp" class="block text-lg font-medium text-gray-700">WhatsApp number</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <input type="tel" id="whatsapp" name="entry.111818168" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                 </div>
                  <div>
                     <label for="email" class="block text-lg font-medium text-gray-700">Email <span class="text-sm text-gray-500">(Optional)</span></label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <input type="email" id="email" name="entry.315024419" class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                 </div>
                 <div>
                     <label for="date" class="block text-lg font-medium text-gray-700">Preferred date</label>
-                    <input type="date" id="date" name="date" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <input type="date" id="date" name="entry.155891336" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                 </div>
                  <div>
                     <label for="group" class="block text-lg font-medium text-gray-700">Group size</label>
-                    <input type="number" id="group" name="group" min="1" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <input type="number" id="group" name="entry.1084294326" min="1" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                 </div>
                 <div>
                     <label for="experience" class="block text-lg font-medium text-gray-700">Experience</label>
-                    <select id="experience" name="experience" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    <select id="experience" name="entry.83063544" required class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
                         <option>Walk-in</option>
                         <option>Guided tour</option>
                         <option>Photography/Videography</option>
@@ -418,12 +420,16 @@
                 </div>
                 <div>
                     <label for="notes" class="block text-lg font-medium text-gray-700">Accessibility or notes</label>
-                    <textarea id="notes" name="notes" rows="3" class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                    <textarea id="notes" name="entry.1105432098" rows="3" class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
                 </div>
                 <div>
-                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition">Submit Request</button>
+                    <button type="submit" id="submit-button" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition">Submit Request</button>
                 </div>
             </form>
+            <!-- This is where we will show the success message -->
+            <div id="success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 border border-green-300 rounded-xl">
+                Thank you for your request! We will get back to you shortly.
+            </div>
         </div>
     </section>
 
@@ -434,8 +440,8 @@
             <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-2xl hover:text-green-300 transition-colors">
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.62 14.24c-.2.13-.44.2-.69.2-.56 0-1.03-.35-1.22-.85l-.39-1.02c-.33.2-.7.34-1.1.43V16.5c.53-.16.98-.49 1.32-.94l.26.67c.2.5.67.85 1.22.85.25 0 .49-.07.69-.2.38-.25.61-.67.61-1.13 0-.46-.23-.88-.61-1.13-.38-.25-.89-.38-1.5-.53l-1.04-.26c-1.48-.37-2.47-1.1-2.47-2.52 0-.96.6-1.78 1.48-2.18v-1.5h1.19v1.44c.48.13.9.36 1.25.67l-.26-.67c-.2-.5-.67-.85-1.22-.85-.22 0-.42.06-.6.16-.35.2-.56.56-.56.97 0 .41.21.77.56.97.35.2.8.34 1.34.46l1.04.26c1.48.37 2.47 1.1 2.47 2.52 0 .96-.6 1.78-1.48 2.18v1.5h-1.19v-1.44z" clip-rule="evenodd" /></svg>
-                </a>                
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-2.43 0-2.784.011-3.808.06-1.064.049-1.791.218-2.427.465a4.902 4.902 0 00-1.772 1.153 4.902 4.902 0 00-1.153 1.772c-.247.636-.316 1.363-.364 2.427-.048 1.024-.06 1.378-.06 3.808s.012 2.784.06 3.808c.048 1.064.218 1.791.465 2.427a4.902 4.902 0 001.153 1.772 4.902 4.902 0 001.772 1.153c.636.247 1.363.316 2.427.364 1.024.048 1.378.06 3.808.06s2.784-.012 3.808-.06c1.064-.048 1.791-.218 2.427-.465a4.902 4.902 0 001.772-1.153 4.902 4.902 0 001.153-1.772c.247-.636.316-1.363.364-2.427.048-1.024.06-1.378.06-3.808s-.012-2.784-.06-3.808c-.048-1.064-.218-1.791-.465-2.427a4.902 4.902 0 00-1.153-1.772 4.902 4.902 0 00-1.772-1.153c-.636-.247-1.363-.316-2.427-.364C15.099 2.011 14.745 2 12.315 2zM12 4.869c2.841 0 3.193.012 4.316.062.977.045 1.505.207 1.858.344.466.182.77.398 1.15.774.38.38.59.684.774 1.15.137.353.3.88.344 1.858.05 1.123.062 1.475.062 4.316s-.012 3.193-.062 4.316c-.045.977-.207 1.505-.344 1.858a3.097 3.097 0 01-.774 1.15 3.097 3.097 0 01-1.15.774c-.353.137-.88.3-1.858.344-1.123.05-1.475.062-4.316.062s-3.193-.012-4.316-.062c-.977-.045-1.505-.207-1.858-.344a3.097 3.097 0 01-1.15-.774 3.097 3.097 0 01-.774-1.15c-.137-.353-.3-.88-.344-1.858-.05-1.123-.062-1.475-.062-4.316s.012-3.193.062-4.316c.045-.977.207-1.505.344-1.858.182-.466.398-.77.774-1.15.38-.38.684-.59.774-1.15.353-.137.88-.3 1.858-.344C8.807 4.881 9.159 4.869 12 4.869zM12 8.232a3.768 3.768 0 100 7.536 3.768 3.768 0 000-7.536zm0 6.168a2.4 2.4 0 110-4.8 2.4 2.4 0 010 4.8zm4.965-6.796a.9.9 0 100 1.8.9.9 0 000-1.8z" clip-rule="evenodd" /></svg>
+                </a>                 
             </div>
         </div>
     </footer>
@@ -487,10 +493,10 @@
             });
         });
 
-        // Back to top button visibility
+        // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+            if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
             } else {
                 backToTopButton.classList.remove('show');
@@ -500,7 +506,45 @@
         // Set current year in footer
         document.getElementById('current-year-main').textContent = new Date().getFullYear();
     </script>
+    
+    <!-- ====== SCRIPT FOR GOOGLE FORM SUBMISSION ====== -->
+    <script>
+        const form = document.getElementById('booking-form');
+        const submitButton = document.getElementById('submit-button');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            const formData = new FormData(form);
+            const actionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSd3FbLKcgf4sfE4FxBIfbdAlB7ta7njxDc3Bx2ycT7j7qceCQ/formResponse';
+
+            fetch(actionURL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // This is important to avoid CORS errors
+            }).then(response => {
+                // This block runs after the form data is sent.
+                successMessage.classList.remove('hidden'); // Show your success message
+                form.reset(); // Clear the form fields
+                form.style.display = 'none'; // Optional: hide the form after submission
+                
+            }).catch(error => {
+                // This block runs if there's an error.
+                alert('Oops! There was a problem submitting your form. Please try again.');
+                console.error('Error:', error);
+
+            }).finally(() => {
+                // This block runs regardless of success or error.
+                // If you don't hide the form, you would re-enable the button here.
+                // submitButton.disabled = false;
+                // submitButton.textContent = 'Submit Request';
+            });
+        });
+    </script>
+
 </body>
 </html>
-
-
