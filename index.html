@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4P26TY8NC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J4P26TY8NC');
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="VtsixZiCKrkSIbhz7g-c-Gz63KNTElwNw-tnaVaxacQ" />
@@ -19,9 +10,18 @@
     <meta name="keywords" content="Alexia's Organic Farm, forest dream, organic farm Beltangadi, dakshina kannada farm visit, farm stay Mangalore, nature retreat, sustainable living, organic farming Karnataka, peaceful getaway, forest garden, farm tours" />
     <meta name="robots" content="index, follow" />
     
-    <!-- Preload critical resources -->
+    <!-- === SECURITY & SEO HEADERS (RECOMMENDED) === -->
+    <!-- Content Security Policy (CSP) to prevent XSS. This is a basic example; a full policy is recommended. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://alexiasorganicfarm.com https://www.googletagmanager.com https://www.google-analytics.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.tailwindcss.com https://www.google.com https://docs.google.com https://wa.me; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.tailwindcss.com; frame-src https://www.google.com https://docs.google.com;" />
+    <!-- X-Content-Type-Options: Prevents browsers from "sniffing" MIME types, reducing a security risk. -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <!-- === PERFORMANCE OPTIMIZATION === -->
+    <!-- Preload critical resources to improve Largest Contentful Paint (LCP) -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3bD_c3hNGsjC-1o_tJz.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preloading background image for faster render -->
     <link rel="preload" href="main-bg.webp" as="image" />
-    
+
     <!-- Fonts and Tailwind CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +37,6 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-
     <meta name="apple-mobile-web-app-title" content="Alexia's Organic Farm" />
     
     <!-- Open Graph and Twitter metadata for social sharing -->
@@ -47,7 +46,6 @@
     <meta property="og:url" content="https://alexiasorganicfarm.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Alexia's Organic Farm" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@alexiasorgfarm" />
     <meta name="twitter:title" content="Alexia's Organic Farm | A Forest in the Making in Beltangadi" />
@@ -176,11 +174,12 @@
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="text-center md:text-left mb-4 md:mb-0">
                 <a href="#home" class="inline-block mb-1">
+                    <!-- Added loading="lazy" for performance -->
                     <img src="logo.jpg" alt="Alexia's Organic Farm Logo - a small girl planting a plant" class="h-32 w-auto rounded-md shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/96x96/d4edda/000000?text=Logo';" loading="lazy" />
                 </a>
                 <p class="text-sm italic text-green-200">A forest in the making.</p>
             </div>
-            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6">
+            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-label="Toggle mobile menu">
                 ☰
             </button>
             <nav id="main-nav" class="mobile-menu-hidden md:flex">
@@ -217,7 +216,6 @@
             </p>
         </div>
     </section>
-
 
     <!-- About Our Farm Section -->
     <section id="about" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
@@ -372,7 +370,17 @@
                 </div>
                 <!-- Google Map iframe -->
                 <div class="mt-8 overflow-hidden rounded-xl shadow-xl border border-green-200">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Added loading="lazy" for performance & title for accessibility -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        title="Google Map showing the location of Alexia's Organic Farm">
+                    </iframe>
                 </div>
                 <a href="https://maps.app.goo.gl/7Pzx1cdKiGnvs8nP6" target="_blank" rel="noopener noreferrer" class="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Find Us on Google Maps</a>
             </div>
@@ -387,12 +395,16 @@
 
     <!-- Responsive iframe wrapper -->
     <div class="relative w-full" style="padding-top: 150%;">
+      <!-- Added loading="lazy", title and sandbox attributes for performance, accessibility, and security -->
       <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSd3FbLKcgf4sfE4FxBIfbdAlB7ta7njxDc3Bx2ycT7j7qceCQ/viewform?embedded=true" 
         class="absolute top-0 left-0 w-full h-full rounded-xl shadow-md border border-green-200"
         frameborder="0" 
         marginheight="0" 
-        marginwidth="0">
+        marginwidth="0"
+        loading="lazy"
+        title="Google Forms booking form for Alexia's Organic Farm"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
         Loading…
       </iframe>
     </div>
@@ -421,7 +433,6 @@
       <a class="cta primary" href="#book">Book a visit</a>
       <a class="cta secondary" href="https://wa.me/917619631892?text=Hi%20Alexia%E2%80%99s%20Organic%20Farm!%20I%20want%20to%20plan%20a%20visit.">WhatsApp us</a>
     </div>
-
 
     <!-- Back to top button -->
     <a id="back-to-top" href="#" class="fixed z-50 bottom-4 right-4 bg-green-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-green-700">
@@ -476,45 +487,5 @@
         // Set current year in footer
         document.getElementById('current-year-main').textContent = new Date().getFullYear();
     </script>
-    
-    <!-- ====== SCRIPT FOR GOOGLE FORM SUBMISSION ====== -->
-    <script>
-        const form = document.getElementById('booking-form');
-        const submitButton = document.getElementById('submit-button');
-        const successMessage = document.getElementById('success-message');
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
-
-            const formData = new FormData(form);
-            const actionURL = 'https://forms.gle/o5UUCH9Brgkqo249A';
-
-            fetch(actionURL, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' // This is important to avoid CORS errors
-            }).then(response => {
-                // This block runs after the form data is sent.
-                successMessage.classList.remove('hidden'); // Show your success message
-                form.reset(); // Clear the form fields
-                form.style.display = 'none'; // Optional: hide the form after submission
-                
-            }).catch(error => {
-                // This block runs if there's an error.
-                alert('Oops! There was a problem submitting your form. Please try again.');
-                console.error('Error:', error);
-
-            }).finally(() => {
-                // This block runs regardless of success or error.
-                // If you don't hide the form, you would re-enable the button here.
-                // submitButton.disabled = false;
-                // submitButton.textContent = 'Submit Request';
-            });
-        });
-    </script>
-
 </body>
 </html>
