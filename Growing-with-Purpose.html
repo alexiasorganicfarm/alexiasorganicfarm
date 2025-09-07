@@ -37,15 +37,6 @@
         .mobile-menu-hidden {
             display: none;
         }
-        .mobile-menu-visible {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            background-color: #166534;
-        }
-        .mobile-menu-button {
-            display: none;
-        }
         @media (max-width: 767px) {
             .mobile-menu-button {
                 display: block;
@@ -72,22 +63,36 @@
             color: #4CAF50;
             font-weight: bold;
         }
+
+        /* New styles to manage mobile layout for the header */
+        @media (max-width: 767px) {
+            .mobile-header-logo {
+                height: 5rem; /* Reduced height on mobile */
+            }
+            .mobile-menu-hidden.mobile-menu-visible {
+              display: flex; /* Ensure the menu shows when toggled */
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Section - Updated to match the attached file's style -->
+    <!-- Header Section - Updated for better mobile layout -->
     <header class="bg-green-700 text-white py-4 px-4 shadow-md rounded-b-xl border-b-2 border-green-800">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <!-- Logo with tagline -->
-<a href="index.html" class="flex flex-col items-center md:items-start space-y-1 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
-    <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
-    <p class="text-sm italic text-green-200 text-center md:text-left">A forest in the making.</p>
-</a>
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo with tagline - Now using flex for horizontal alignment on mobile -->
+            <a href="index.html" class="flex items-center space-x-2" aria-label="Alexia's Organic Farm Home">
+                <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="mobile-header-logo h-32 w-auto rounded-md shadow-md" loading="lazy" />
+                <div class="flex flex-col items-start space-y-1">
+                    <p class="text-sm italic text-green-200">A forest in the making.</p>
+                </div>
+            </a>
+            
             <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-controls="main-nav" aria-expanded="false">
+            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none" aria-controls="main-nav" aria-expanded="false">
                 ☰
             </button>
+            
             <!-- Navigation Links -->
             <nav id="main-nav" class="mobile-menu-hidden md:flex">
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
@@ -225,10 +230,8 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mainNav = document.getElementById('main-nav');
             mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                // This is the updated logic. We now just toggle the "mobile-menu-hidden" class.
                 mainNav.classList.toggle('mobile-menu-hidden');
-                mainNav.classList.toggle('mobile-menu-visible');
             });
         });
     </script>
