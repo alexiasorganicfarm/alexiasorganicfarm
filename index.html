@@ -165,6 +165,13 @@
         .sticky-cta .primary { background: #2b8a3e; color: #fff; }
         .sticky-cta .secondary { background: #e6f4ea; color: #2b8a3e; }
         @media (min-width: 992px) { .sticky-cta { display:none; } }
+
+        /* Adjust back-to-top button position on mobile to avoid overlap */
+        @media (max-width: 991px) {
+            #back-to-top {
+                bottom: 5.5rem; /* 88px, provides space above the sticky CTA */
+            }
+        }
     </style>
 </head>
 
@@ -345,6 +352,15 @@
         </div>
     </section>
 
+    <!-- Instagram Section -->
+    <section id="instagram" class="py-16 px-6 bg-white rounded-xl shadow-lg m-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Follow Our Journey</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">See the latest photos and stories from the farm on our Instagram page.</p>
+            <a href="https://www.instagram.com/alexiasorganicfarm/" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition">Visit Our Instagram</a>
+        </div>
+    </section>
+
     <!-- Fresh Produce Section -->
     <section id="produce" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg m-6">
         <div class="container mx-auto text-center max-w-4xl">
@@ -412,7 +428,7 @@
     </section>
 
 <!-- Booking Form Section -->
-<section id="book" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg my-6">
+<section id="book" class="py-16 px-6 bg-green-50 rounded-xl shadow-lg my-6 mb-24 md:mb-6">
   <div class="container mx-auto max-w-4xl text-center">
     <h2 class="text-4xl font-bold text-green-800 mb-6">Book a Visit</h2>
     <p class="text-xl text-gray-700 mb-8">We're excited to welcome you! Please fill out the form below.</p>
@@ -440,7 +456,7 @@
 </section>
 
     <!-- Footer -->
-    <footer class="bg-green-800 text-white py-8 px-6 rounded-t-xl mt-6">
+    <footer class="bg-green-800 text-white py-8 px-6 rounded-t-xl mt-6 pb-24 md:pb-8">
         <div class="container mx-auto text-center">
             <p>&copy; <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
             <p class="text-sm mt-2">Cultivating nature, inspiring experiences.</p>
@@ -522,4 +538,7 @@
     </script>
 </body>
 </html>
+
+
+
 
