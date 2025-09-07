@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4P26TY8NC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J4P26TY8NC');
+    </script>
+
+    <title>Alexia's Organic Farm | A Forest in the Making in Beltangadi</title>
+    <meta name="description" content="Discover 'The Place Where the Trees Remember,' a tranquil forest garden in Beltangadi, Karnataka. Explore our dream of a sustainable, organic farm and find peace in nature.">
+    <meta name="keywords" content="Alexia's Organic Farm, forest dream, organic farm Beltangadi, dakshina kannada farm visit, farm stay Mangalore, nature retreat, sustainable living, organic farming Karnataka, peaceful getaway, forest garden, farm tours">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alexiasorganicfarm.com/" />
+    <meta name="google-site-verification" content="VtsixZiCKrkSIbhz7g-c-Gz63KNTElwNw-tnaVaxacQ" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        .bg-custom-green {
+            background-color: #4CAF50;
+        }
+        .text-custom-green {
+            color: #4CAF50;
+        }
+        .border-custom-green {
+            border-color: #4CAF50;
+        }
+        .hover-bg-custom-green:hover {
+            background-color: #45a049;
+        }
+        .mobile-menu-hidden {
+            display: none;
+        }
+        .mobile-menu-visible {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #166534;
+        }
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        .back-to-top.show {
+            display: flex;
+            opacity: 1;
+        }
+        .back-to-top:hover {
+            background-color: #45a049;
+        }
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: -999;
+        }
+        .skip-link:focus {
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            background-color: #f8fafc;
+            color: #166534;
+            text-decoration: underline;
+            z-index: 1000;
+        }
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #e9f5e9;
+            border-bottom: 1px solid #d1e7dd;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-question:hover {
+            background-color: #dcfce7;
+        }
+        .faq-question.expanded {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1rem;
+            background-color: #f8fafc;
+            border: 1px solid #d1e7dd;
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        .faq-answer.show {
+            max-height: 1000px; /* Adjusted for full content on mobile */
+            padding: 1rem;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faq-question.expanded .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .mobile-menu-button {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            .mobile-menu-visible {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: #166534;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem 0;
+                border-radius: 0 0 0.75rem 0.75rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 20;
+            }
+            .mobile-menu-visible li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased font-inter">
+
+    <!-- A "Skip to Content" link for accessibility. It becomes visible on focus. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Section with a lighter theme matching the footer -->
+    <header class="bg-green-700 text-white py-4 px-4 shadow-md rounded-b-xl border-b-2 border-green-800">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- The logo now links to the #home anchor using smooth scrolling -->
+            <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
+                <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
+            </a>
+            <!-- Accessibility improvements for the mobile menu button -->
+            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-controls="main-nav" aria-expanded="false">
+                ☰
+            </button>
+            <nav id="main-nav" class="mobile-menu-hidden md:flex">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
+                    <!-- The "Home" link now points to index.html -->
+                    <li role="none"><a href="index.html" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#why-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
+                    <li role="none"><a href="#plan-your-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
+                    <li role="none"><a href="#faqs" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">FAQs</a></li>
+                    <li role="none"><a href="#visitor-code-of-conduct"  class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Visitor Code of Conduct</a></li>
+                    <li role="none"><a href="#contact" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl" id="main-content" tabindex="-1">
+        <!-- New #home anchor section to serve as the destination for the 'Home' link -->
+        <section id="home" class="mb-12" aria-label="Home Section">
+            <!-- This section is just an anchor point. The 'Why Visit' section serves as the main hero content. -->
+        </section>
+
+        <!-- Why Visit Section -->
+        <section id="why-visit" class="mb-12 bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="why-visit-heading">
+            <div class="text-center mb-8">
+                <h2 id="why-visit-heading" class="text-2xl md:text-3xl font-semibold text-custom-green">🌿 Why Visit Alexia’s Organic Farm?</h2>
+            </div>
+            <div class="p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">✨ A Place to Breathe, Not Just Be</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                    Step into a space where silence is sacred, trees are teachers, and time slows down. Alexia’s Organic Farm isn’t a tourist spot—it’s a living forest in the making, designed to reconnect you with nature, simplicity, and yourself.
+                </p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">🌱 What You’ll Experience</h3>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-600">
+                    <li><strong class="font-semibold">Nature Immersion:</strong> Walk through native forest trails, sit by the pond, and listen to birdsong instead of traffic.</li>
+                    <li><strong class="font-semibold">Organic Living:</strong> Learn how food is grown without chemicals, and maybe even help harvest seasonal fruits and vegetables.</li>
+                    <li><strong class="font-semibold">Quiet Reflection:</strong> Bring your own lunch, find a shady tree, and enjoy uninterrupted time with your thoughts.</li>
+                    <li><strong class="font-semibold">Sustainable Values:</strong> Every visit supports the soil, the trees, and the community—not profit.</li>
+                </ul>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mt-6 mb-4">🤝 How It Works</h3>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-600">
+                    <li>We suggest booking visits at least 2 days in advance to keep them personal and peaceful. If you can’t book ahead, walk-in visitors are welcome whenever space allows, and we’ll do our best to accommodate you.</li>
+                    <li>We ask for a modest fixed contribution to help us care for the farm and keep this space peaceful for all visitors.</li>
+                    <li>No commercial activities. No crowds. Just nature, and you.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="my-12 border-t-2 border-green-200">
+
+        <!-- Plan Your Visit Section -->
+        <section id="plan-your-visit" class="mb-12 bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="plan-your-visit-heading">
+            <h2 id="plan-your-visit-heading" class="text-3xl font-semibold text-gray-800 text-center mb-8">Plan Your Visit</h2>
+            <div class="p-6 md:p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-600 mb-6">Here you'll find all the information you need to make your trip to our farm enjoyable. If you have any questions not answered here, please don't hesitate to contact us.</p>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Getting Here</h3>
+                <p class="text-lg text-gray-600 mb-4">Parking is available on-site. The farm is 2 km from the main road. You can take a rickshaw or walk.</p>
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4 mt-6">What to Bring</h3>
+                <ul class="list-disc list-inside space-y-1 text-lg text-gray-600">
+                    <li>Comfortable shoes</li>
+                    <li>Hat and sunscreen</li>
+                    <li>Insect repellent</li>
+                    <li>Water bottle</li>
+                    <li>Lunch or snacks</li>
+                </ul>
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4 mt-6">Pets</h3>
+                <p class="text-lg text-gray-600 mb-4">Pets are welcome with a ₹50 entry fee. Please bring water bowls, food for your dog, poop bags, and keep your pet on a leash at all times.</p>
+            </div>
+        </section>
+
+        <hr class="my-12 border-t-2 border-green-200">
+
+        <!-- Updated FAQ Section with new content and accordion functionality -->
+        <section id="faqs" class="mb-12 bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="faqs-heading">
+            <h2 id="faqs-heading" class="text-3xl font-semibold text-gray-800 text-center mb-8">Frequently Asked Questions</h2>
+            <div class="p-6 md:p-8 rounded-lg shadow-lg">
+
+                <!-- Our Vision & Practices -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Our Vision & Practices</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: What is the "forest dream"?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: The "forest dream" is our long-term vision to transform our 5-acre land into a thriving, self-sustaining forest garden. We aim to create a diverse ecosystem filled with native trees, fruit trees, medicinal plants, and more — all cultivated using organic and permaculture principles. Our farming mimics the slow, steady growth of a natural forest, nurturing the land gently and allowing each plant to find its place in a balanced, resilient environment.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Do you use pesticides or chemical fertilizers?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: No, we are a completely organic farm. We do not use chemical pesticides, herbicides, or synthetic fertilizers. Instead, we focus on natural soil health, biodiversity, and slow-growth methods inspired by forests, which help produce healthy, nutrient-rich crops while maintaining the farm’s ecological balance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: What kind of produce do you grow?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: We cultivate a wide range of produce including seasonal fruits, vegetables, and spices. We prioritize native and climate-resilient crops suited to our local environment, encouraging diversity and sustainability.</p>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Booking & Visits -->
+<div class="space-y-4 mt-8">
+    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Booking & Visits</h3>
+
+    <!-- How do I book a visit? -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: How do I book a visit?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">A: We suggest booking visits at least 2 days in advance by contacting us via phone or email to ensure a calm and personal experience. If you’re unable to book, we’ll do our best to accommodate walk-in visitors whenever space allows.</p>
+        </div>
+    </div>
+
+    <!-- Entry Fee & Walk-ins -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: What is the entry fee?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">
+                A: Entry is ₹50 per person for visitors aged 18 and above. Visitors under 18 may enter free of charge when accompanied by an adult. Walk-in visitors are welcome whenever space allows, and the same contribution applies. This modest contribution helps us maintain and care for the farm.
+            </p>
+        </div>
+    </div>
+
+    <!-- Why children under 18 enter free -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: Why do children under 18 enter for free?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">A: At Alexia’s Organic Farm, we believe in nurturing a lifelong connection to nature from an early age. Welcoming children under 18 free of charge encourages families to explore, learn, and grow alongside the land — without any barriers. This reflects our commitment to creating a calm, meaningful space where the next generation can experience the beauty and wisdom of the natural world.</p>
+        </div>
+    </div>
+
+    <!-- Visit Duration -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: How long can I stay after entry?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">A: Most visits comfortably last between 2 to 3 hours, allowing you to soak in the calm and explore peacefully. If you want to stay longer or book a special experience, please contact us in advance.</p>
+        </div>
+    </div>
+
+    <!-- Cancellation Policy -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: What is your cancellation policy?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">A: Please notify us at least 24 hours ahead if you need to cancel or reschedule your visit.</p>
+        </div>
+    </div>
+
+    <!-- Bad Weather -->
+    <div class="faq-item">
+        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+            <span class="font-semibold text-gray-800">Q: What if there’s bad weather?</span>
+            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+            <p class="py-4">A: Please contact us immediately if you are concerned about the weather. Visits may be rescheduled for your safety and comfort.</p>
+        </div>
+    </div>
+
+</div>
+
+                <!-- Visitors & Pets -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Visitors & Pets</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I bring children or pets?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Children are welcome with adult supervision. Pets are also welcome with a ₹50 pet entry fee. For the safety of everyone and the farm's wildlife, please keep pets on a leash at all times and clean up after them.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Photography & Videography -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Professional Photography & Videography</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I take professional photos or videos at the farm?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Absolutely. We welcome artists, photographers, and storytellers to capture the farm’s quiet beauty.
+                                <br><br>
+                                <strong>Ground photography/videography:</strong> ₹500 per session (up to 4 hours)<br>
+                                <strong>Drone photography/videography:</strong> ₹500 per session (up to 4 hours, with prior permission)<br>
+                                <strong>Full access (ground + drone):</strong> ₹900 per session (up to 4 hours)<br><br>
+                                All sessions require advance booking to ensure your creative time remains undisturbed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Why is there a fee?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Your contribution helps care for the trees, nurture the soil, and keep this space peaceful for everyone.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Are there any guidelines?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Yes, we ask that you treat every tree, plant, and creature with care; take back everything you bring; keep voices and music gentle; and wrap up within your booked time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guided Tours & Activities -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Guided Tours & Activities</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: What about guided tours?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: We offer guided farm tours to explore our organic practices, native plants, and sustainability journey. Tours last up to 3 hours and cost ₹150 per person, which includes your entry fee.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: What does a full-day visit include and how much does it cost?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                <div class="faq-answer px-4 py-0 bg-white rounded-b-lg border border-t-0 border-green-300">
+                        <p class="py-4 text-base text-gray-600"> A: A full-day visit (up to 8 hours) costs ₹500 per person and includes: 
+                    </p>
+                         <ul class="list-disc list-inside space-y-1 text-base text-gray-600 py-2">
+                        <li>Guided farm tour</li>
+                        <li>Unrestricted access to the 5-acre farm</li>
+                        <li>A small basket of fresh, seasonal fruits and vegetables — a taste of the farm’s bounty</li>
+                        <li>Access to peaceful picnic spots by the pond or under shaded trees (please bring your own lunch if you wish)</li>
+                        <li>Opportunity to join seasonal harvest experiences (advance booking required)</li>
+                        </ul>
+                      <p class="py-2 text-base text-gray-600">
+                        We ask all visitors to respect the farm’s quiet nature and follow guidelines to protect this peaceful space.
+                    </p>
+                </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Are there other activities available?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Yes! You can enquire about seasonal harvest experiences for hands-on picking (seasonal availability) and self-guided nature walks for those who prefer quiet strolls.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I bring a picnic?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Yes, please feel free to bring your own lunch and enjoy a peaceful picnic in designated areas near the pond or under shaded trees.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: How do I book a visit or special activity?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: All visits and sessions require advance booking. Contact us via email or phone to schedule your visit or enquire about availability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety & Responsibility -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Safety & Responsibility</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Is the farm safe? Who’s responsible for accidents?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: The farm is natural terrain with active farming. Please stay on designated paths and supervise your group at all times. You are responsible for your own safety and that of your group during the visit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health & Comfort -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Health & Comfort</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Should I prepare for allergies or insects?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: The farm is a natural outdoor environment, so you may encounter insects such as mosquitoes or bees, and pollen or other allergens. We recommend wearing comfortable clothing, using insect repellent if needed, and informing us of any severe allergies when booking. We strive to maintain a safe and welcoming space for all visitors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enjoying the Farm’s Bounty -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Enjoying the Farm’s Bounty</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I pick fruits or plants?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Please ask a staff member before picking anything. We want to ensure there is plenty for everyone and that you pick only what’s ripe and ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Accessibility</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Is the farm wheelchair accessible?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Not yet, as the terrain is natural and uneven. However, rest areas are available, and we can provide assistance if you get in touch beforehand to let us know your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer & Internship Opportunities -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Volunteer & Internship Opportunities</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: Can I volunteer or intern?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: We are currently planning volunteer and internship programs to support our forest dream. Please stay tuned to our social media channels or contact us for updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Emergencies -->
+                <div class="space-y-4 mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Contact & Emergencies</h3>
+                    <div class="faq-item">
+                        <button class="faq-question flex justify-between items-center w-full text-left rounded-lg p-4 border border-green-300 bg-green-50 hover:bg-green-100 transition-colors duration-200" aria-expanded="false">
+                            <span class="font-semibold text-gray-800">Q: How do I contact you?</span>
+                            <svg class="faq-icon w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-4 py-0 text-gray-600 bg-white rounded-b-lg border border-t-0 border-green-300">
+                            <p class="py-4">A: Phone (WhatsApp): <a href="https://wa.me/917619631892" class="text-custom-green hover:underline">+91 (761) 963-1892</a> | Email: <a href="mailto:alexiasorganicfarm@gmail.com" class="text-custom-green hover:underline">alexiasorganicfarm@gmail.com</a>. You can also reach us via the contact form on our website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-t-2 border-green-200">
+        
+        <!-- Visitor Code of Conduct Section -->
+<section id="visitor-code-of-conduct" class="mb-12 bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="visitor-code-of-conduct-heading">
+    <h2 id="visitor-code-of-conduct-heading" class="text-3xl font-semibold text-gray-800 text-center mb-8">Visitor Code of Conduct</h2>
+    <div class="p-6 md:p-8 rounded-lg shadow-lg">
+        <p class="text-lg text-gray-600 mb-6">Welcome to <strong>Alexia’s Organic Farm</strong> — a place to slow down, breathe in nature, and share in the peace our land offers. To ensure everyone enjoys their time here and that our natural environment stays healthy for years to come, we kindly ask you to follow these shared responsibilities:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Supervision of Minors</h3>
+        <p class="text-lg text-gray-600 mb-4">Children under 18 must be accompanied and supervised by a responsible adult or guardian at all times while on the farm. Visitors are fully responsible for the safety and behaviour of the minors in their care. Please be aware that the farm contains natural hazards such as ponds, uneven terrain, and wildlife. Alexia’s Organic Farm cannot be held liable for accidents or injuries caused by lack of supervision or negligence.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 mb-4 mt-6">Respect for Nature & Each Other</h3>
+        <p class="text-lg text-gray-600 mb-4">Help us keep the farm a peaceful and welcoming space for everyone. Kindly avoid disruptive noise, littering, vandalism, or any behaviour that may disturb people, plants, or animals. Stay on marked paths and follow any posted guidance to protect both yourself and the farm’s ecosystem.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 mb-4 mt-6">Privacy & Photography</h3>
+        <p class="text-lg text-gray-600 mb-4">We encourage photography of the farm’s landscapes, plants, and wildlife — but please respect the privacy of other visitors. Do not take photos or videos of individuals without their consent.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 mb-4 mt-6">Safety First</h3>
+        <p class="text-lg text-gray-600 mb-4">Please be mindful of your surroundings and follow all safety signs. Do not touch or damage plants, trees, or farm equipment. Wildlife should be observed from a safe distance.</p>
+
+        <p class="text-lg text-gray-600 font-semibold mt-6">Thank you for helping us keep Alexia’s Organic Farm safe, beautiful, and peaceful for all who visit. 🌱</p>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-12 text-center bg-white rounded-xl shadow-lg m-6 p-6 md:p-8" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="text-3xl font-semibold text-gray-800 mb-8">Contact Information</h2>
+            <div class="p-6 md:p-8 rounded-lg shadow-lg inline-block">
+                <p class="text-lg text-gray-600 mb-2">
+                    <strong class="font-semibold">Phone (WhatsApp):</strong>
+                    <a href="https://wa.me/917619631892" class="text-custom-green hover:underline">+91 (761) 963-1892</a>
+                </p>
+                <p class="text-lg text-gray-600 mb-2">
+                    <strong class="font-semibold">Email:</strong>
+                    <a href="mailto:alexiasorganicfarm@gmail.com" class="text-custom-green hover:underline">alexiasorganicfarm@gmail.com</a>
+                </p>
+                <p class="text-lg text-gray-600 mb-2">
+                    <strong class="font-semibold">Instagram:</strong>
+                    <a href="https://instagram.com/alexiasorganicfarm" class="text-custom-green hover:underline" target="_blank">@alexiasorganicfarm</a>
+                </p>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Find Us on Google Maps</h3>
+                    <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.198944758209!2d75.2998906!3d13.022999499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4b7de743d5827%3A0x752d1489f3f30af2!2sAlexia's%20Organic%20Farm!5e0!3m2!1sen!2sae!4v1754834043893!5m2!1sen!2sae"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute top-0 left-0 w-full h-full rounded-md shadow-lg">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-700 text-white py-6 px-6 text-center rounded-t-xl mt-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            <p class="text-lg">© <span id="current-year-main"></span> Alexia's Organic Farm. All rights reserved.</p>
+            <p class="text-sm">Cultivating nature, inspiring experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" class="back-to-top" aria-label="Back to top of the page">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- JavaScript for Mobile Menu and Back-to-Top button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            const navLinks = mainNav.querySelectorAll('a');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !expanded);
+                mainNav.classList.toggle('mobile-menu-hidden');
+                mainNav.classList.toggle('mobile-menu-visible');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mainNav.classList.contains('mobile-menu-hidden')) {
+                        mobileMenuButton.click();
+                    }
+                });
+            });
+
+            // Back to Top functionality
+            const backToTopBtn = document.getElementById('back-to-top-btn');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // FAQ Accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other open answers
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            otherQuestion.setAttribute('aria-expanded', 'false');
+                            otherQuestion.classList.remove('expanded');
+                            otherQuestion.nextElementSibling.classList.remove('show');
+                        }
+                    });
+
+                    // Toggle the clicked answer
+                    question.setAttribute('aria-expanded', !isExpanded);
+                    question.classList.toggle('expanded');
+                    answer.classList.toggle('show');
+                });
+            });
+
+            // Set the current year in the footer
+            document.getElementById('current-year-main').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
