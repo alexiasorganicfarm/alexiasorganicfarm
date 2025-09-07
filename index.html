@@ -141,10 +141,10 @@
             right: 2rem;
             background-color: #16a34a;
             color: white;
-            padding: 0.75rem 1rem;
+            padding: 0.75rem;
             border-radius: 9999px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
             opacity: 0;
             visibility: hidden;
             z-index: 50;
@@ -152,6 +152,9 @@
         #back-to-top.show {
             opacity: 1;
             visibility: visible;
+        }
+        #back-to-top:hover {
+            transform: scale(1.1);
         }
         .sticky-cta {
           position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
@@ -165,7 +168,7 @@
     </style>
 </head>
 
-<body class="antialiased font-inter">
+<body class="antialiased font-inter bg-gray-50">
 
     <!-- Header & Navigation -->
     <header class="bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg py-4 px-6 rounded-b-xl relative">
@@ -456,9 +459,9 @@
     </div>
 
     <!-- Back to top button -->
-    <a id="back-to-top" href="#" class="fixed z-50 bottom-4 right-4 bg-green-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-green-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    <a id="back-to-top" href="#home" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
     </a>
 
@@ -468,11 +471,20 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    // Special handling for scrolling to top
+                    if (targetId === '#home') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
@@ -509,3 +521,5 @@
         document.getElementById('current-year-main').textContent = new Date().getFullYear();
     </script>
 </body>
+</html>
+
