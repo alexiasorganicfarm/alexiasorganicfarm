@@ -651,28 +651,45 @@
     </svg>
 </button>
 
-    <!-- JavaScript for Mobile Menu and Back-to-Top button -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mainNav = document.getElementById('main-nav');
-            const navLinks = mainNav.querySelectorAll('a');
+<!-- JavaScript for Mobile Menu and Back-to-Top button -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mainNav = document.getElementById('main-nav');
+    const navLinks = mainNav.querySelectorAll('a');
 
-            mobileMenuButton.addEventListener('click', () => {
-                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
-                mobileMenuButton.setAttribute('aria-expanded', !expanded);
-                mainNav.classList.toggle('mobile-menu-hidden');
-                mainNav.classList.toggle('mobile-menu-visible');
-            });
+    // Mobile menu toggle
+    mobileMenuButton.addEventListener('click', () => {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+        mobileMenuButton.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('mobile-menu-hidden');
+        mainNav.classList.toggle('mobile-menu-visible');
+    });
 
-            // Close mobile menu when a link is clicked
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mainNav.classList.contains('mobile-menu-hidden')) {
-                        mobileMenuButton.click();
-                    }
-                });
-            });
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mainNav.classList.contains('mobile-menu-hidden')) {
+                mobileMenuButton.click();
+            }
+        });
+    });
+
+    // Back to Top button functionality
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+</script>
 
             // Back to Top functionality
             const backToTopBtn = document.getElementById('back-to-top-btn');
