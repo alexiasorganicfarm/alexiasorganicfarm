@@ -152,12 +152,16 @@
     </style>
 </head>
 <body class="bg-white text-gray-900 font-inter">
-    <header class="bg-green-800 text-white p-4 flex justify-between items-center flex-col md:flex-row">
-        <a href="https://alexiasorganicfarm.com/#home" class="flex items-center space-x-3 mb-2 md:mb-0">
-            <img src="logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
-        </a>
-        <a href="https://alexiasorganicfarm.com/" class="text-white underline">← Back to Home</a>
-    </header>
+  <header class="bg-green-800 text-white p-4 flex flex-col md:flex-row justify-between items-center">
+    <!-- Logo + Tagline -->
+    <a href="https://alexiasorganicfarm.com/#home" class="flex flex-col items-center md:items-start space-y-1 mb-2 md:mb-0">
+        <img src="logo.jpg" alt="Alexia's Organic Farm Logo - a lush green farm with a sun icon" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
+        <p class="text-sm italic text-green-200 text-center md:text-left">A forest in the making.</p>
+    </a>
+
+    <!-- Back to Home link -->
+    <a href="https://alexiasorganicfarm.com/" class="text-white underline mt-2 md:mt-0 md:text-right">← Back to Home</a>
+</header>
 
     <main class="p-6">
         <h1 class="text-4xl font-bold mb-4 text-center">Farm Gallery</h1>
@@ -359,3 +363,4 @@
     </script>
 </body>
 </html>
+
