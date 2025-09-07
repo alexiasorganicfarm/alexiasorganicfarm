@@ -24,6 +24,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    /* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make sure container widths are within viewport */
+header, .container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+    /* Mobile menu - hidden by default */
+.mobile-menu {
+  display: none;       /* hidden initially */
+  position: absolute;  /* positions below header */
+  top: 100%;           /* starts right below header */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 50;         /* above content */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Show menu when active */
+.mobile-menu.active {
+  display: block;
+}
+
 
     <style>
         body {
