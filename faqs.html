@@ -169,35 +169,33 @@
 </head>
 <body class="antialiased font-inter">
 
-   <!-- A "Skip to Content" link for accessibility. It becomes visible on focus. -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- A "Skip to Content" link for accessibility. It becomes visible on focus. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- Header Section with a lighter theme matching the footer -->
-<header class="bg-green-700 text-white py-4 px-4 shadow-md rounded-b-xl border-b-2 border-green-800">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative">
-    <div class="flex flex-col items-center md:items-start md:flex-row md:space-x-4">
-      <a href="index.html" aria-label="Alexia's Organic Farm Home" class="flex items-center space-x-3 mb-2 md:mb-0">
-        <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
-      </a>
-      <p class="text-sm italic text-green-200 mb-2 md:mb-0">A forest in the making.</p>
-    </div>
-
-    <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">
-      ☰
-    </button>
-
-    <nav id="main-nav" class="hidden md:flex absolute md:static top-16 right-4 md:top-auto md:right-auto">
-      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
-        <li role="none"><a href="index.html" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Home</a></li>
-        <li role="none"><a href="#why-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
-        <li role="none"><a href="#plan-your-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
-        <li role="none"><a href="#faqs" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">FAQs</a></li>
-        <li role="none"><a href="#visitor-code-of-conduct" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Visitor Code of Conduct</a></li>
-        <li role="none"><a href="#contact" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- Header Section with a lighter theme matching the footer -->
+    <header class="bg-green-700 text-white py-4 px-4 shadow-md rounded-b-xl border-b-2 border-green-800">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- The logo now links to the #home anchor using smooth scrolling -->
+            <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0" aria-label="Alexia's Organic Farm Home">
+                <img src="logo.jpg" alt="Alexia's Organic Farm Logo" class="h-32 w-auto rounded-md shadow-md" loading="lazy" />
+            </a>
+            <!-- Accessibility improvements for the mobile menu button -->
+            <button id="mobile-menu-button" class="mobile-menu-button text-white text-3xl focus:outline-none absolute top-4 right-6" aria-controls="main-nav" aria-expanded="false">
+                ☰
+            </button>
+            <nav id="main-nav" class="mobile-menu-hidden md:flex">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center" role="menubar">
+                    <!-- The "Home" link now points to index.html -->
+                    <li role="none"><a href="index.html" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#why-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Why Visit</a></li>
+                    <li role="none"><a href="#plan-your-visit" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Plan Your Visit</a></li>
+                    <li role="none"><a href="#faqs" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">FAQs</a></li>
+                    <li role="none"><a href="#visitor-code-of-conduct"  class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Visitor Code of Conduct</a></li>
+                    <li role="none"><a href="#contact" class="hover:text-green-300 transition text-lg font-medium" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 max-w-4xl" id="main-content" tabindex="-1">
