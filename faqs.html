@@ -51,15 +51,16 @@
     position: relative;
 }
 
-@media (max-width: 767px) {
-    .mobile-menu-visible {
-        /* Other styles for the menu */
-        position: fixed; /* Changed from absolute to fixed */
-        top: 0; /* Aligns the menu with the top of the browser window */
-        left: 0;
-        z-index: 50; /* Ensure it appears on top of other content */
-    }
+.mobile-menu-visible {
+    /* Other styles */
+    position: absolute;
+    top: 100%; /* This is the key. It places the menu exactly 100% down from the top of the header. */
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    /* ... other styles */
 }
+
         .back-to-top {
             display: none;
             position: fixed;
