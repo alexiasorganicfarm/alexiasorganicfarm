@@ -651,67 +651,77 @@
 
     <!-- JavaScript for Mobile Menu and Back-to-Top button -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mainNav = document.getElementById('main-nav');
-            const navLinks = mainNav.querySelectorAll('a');
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mainNav = document.getElementById('main-nav');
+    const navLinks = mainNav.querySelectorAll('a');
 
-            mobileMenuButton.addEventListener('click', () => {
-                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
-                mobileMenuButton.setAttribute('aria-expanded', !expanded);
-                mainNav.classList.toggle('mobile-menu-hidden');
-                mainNav.classList.toggle('mobile-menu-visible');
-            });
+    // Function to toggle the mobile menu's state
+    function toggleMobileMenu() {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        mainNav.classList.toggle('mobile-menu-hidden');
+        mainNav.classList.toggle('mobile-menu-visible');
+    }
 
-            // Close mobile menu when a link is clicked
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mainNav.classList.contains('mobile-menu-hidden')) {
-                        mobileMenuButton.click();
-                    }
-                });
-            });
+    // Event listener for the burger button
+    if (mobileMenuButton && mainNav) {
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+    }
 
-            // Back to Top functionality
-            const backToTopBtn = document.getElementById('back-to-top-btn');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('show');
-                } else {
-                    backToTopBtn.classList.remove('show');
+    // Close mobile menu when a link is clicked, but only on mobile
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            // Check if the menu is visible and we're on a mobile screen
+            if (!mainNav.classList.contains('mobile-menu-hidden') && window.innerWidth <= 767) {
+                // Wait for a short moment to allow the browser to process the navigation
+                setTimeout(() => {
+                    toggleMobileMenu();
+                }, 150); 
+            }
+        });
+    });
+
+    // Back to Top functionality
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // FAQ Accordion functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== question) {
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherQuestion.classList.remove('expanded');
+                    otherQuestion.nextElementSibling.classList.remove('show');
                 }
             });
-
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // FAQ Accordion functionality
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    const isExpanded = question.getAttribute('aria-expanded') === 'true';
-
-                    // Close all other open answers
-                    faqQuestions.forEach(otherQuestion => {
-                        if (otherQuestion !== question) {
-                            otherQuestion.setAttribute('aria-expanded', 'false');
-                            otherQuestion.classList.remove('expanded');
-                            otherQuestion.nextElementSibling.classList.remove('show');
-                        }
-                    });
-
-                    // Toggle the clicked answer
-                    question.setAttribute('aria-expanded', !isExpanded);
-                    question.classList.toggle('expanded');
-                    answer.classList.toggle('show');
-                });
-            });
-
-            // Set the current year in the footer
-            document.getElementById('current-year-main').textContent = new Date().getFullYear();
+            question.setAttribute('aria-expanded', !isExpanded);
+            question.classList.toggle('expanded');
+            answer.classList.toggle('show');
         });
-    </script>
+    });
+
+    // Set the current year in the footer
+    const currentYearElement = document.getElementById('current-year-main');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+});
+</script>
 </body>
 </html>
