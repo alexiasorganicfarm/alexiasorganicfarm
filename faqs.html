@@ -51,18 +51,14 @@
     position: relative;
 }
 
-.mobile-menu-visible {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #166534;
-    position: absolute; /* This makes it position relative to the nearest positioned ancestor */
-    top: 100%; /* Positions the menu right below the header */
-    left: 0;
-    padding: 1rem 0;
-    border-radius: 0 0 0.75rem 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 20;
+@media (max-width: 767px) {
+    .mobile-menu-visible {
+        /* Other styles for the menu */
+        position: fixed; /* Changed from absolute to fixed */
+        top: 0; /* Aligns the menu with the top of the browser window */
+        left: 0;
+        z-index: 50; /* Ensure it appears on top of other content */
+    }
 }
         .back-to-top {
             display: none;
