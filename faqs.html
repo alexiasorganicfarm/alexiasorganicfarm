@@ -44,23 +44,34 @@
         .hover-bg-custom-green:hover {
             background-color: #45a049;
         }
-        .mobile-menu-hidden {
+        }
+        .mobile-menu-button {
             display: none;
         }
-       .header-container {
-    position: relative;
-}
-
-.mobile-menu-visible {
-    /* Other styles */
-    position: absolute;
-    top: 100%; /* This is the key. It places the menu exactly 100% down from the top of the header. */
-    left: 0;
-    width: 100%;
-    z-index: 20;
-    /* ... other styles */
-}
-
+        @media (max-width: 767px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            .mobile-menu-hidden {
+                display: none;
+            }
+            .mobile-menu-visible {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: #166534;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem 0;
+                border-radius: 0 0 0.75rem 0.75rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 20;
+            }
+            .mobile-menu-visible li {
+                margin: 0.5rem 0;
+            }
+        }
         .back-to-top {
             display: none;
             position: fixed;
@@ -659,77 +670,67 @@
 
     <!-- JavaScript for Mobile Menu and Back-to-Top button -->
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mainNav = document.getElementById('main-nav');
-    const navLinks = mainNav.querySelectorAll('a');
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            const navLinks = mainNav.querySelectorAll('a');
 
-    // Function to toggle the mobile menu's state
-    function toggleMobileMenu() {
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
-        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-        mainNav.classList.toggle('mobile-menu-hidden');
-        mainNav.classList.toggle('mobile-menu-visible');
-    }
+            mobileMenuButton.addEventListener('click', () => {
+                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !expanded);
+                mainNav.classList.toggle('mobile-menu-hidden');
+                mainNav.classList.toggle('mobile-menu-visible');
+            });
 
-    // Event listener for the burger button
-    if (mobileMenuButton && mainNav) {
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-    }
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mainNav.classList.contains('mobile-menu-hidden')) {
+                        mobileMenuButton.click();
+                    }
+                });
+            });
 
-    // Close mobile menu when a link is clicked, but only on mobile
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            // Check if the menu is visible and we're on a mobile screen
-            if (!mainNav.classList.contains('mobile-menu-hidden') && window.innerWidth <= 767) {
-                // Wait for a short moment to allow the browser to process the navigation
-                setTimeout(() => {
-                    toggleMobileMenu();
-                }, 150); 
-            }
-        });
-    });
-
-    // Back to Top functionality
-    const backToTopBtn = document.getElementById('back-to-top-btn');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    // FAQ Accordion functionality
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const isExpanded = question.getAttribute('aria-expanded') === 'true';
-            faqQuestions.forEach(otherQuestion => {
-                if (otherQuestion !== question) {
-                    otherQuestion.setAttribute('aria-expanded', 'false');
-                    otherQuestion.classList.remove('expanded');
-                    otherQuestion.nextElementSibling.classList.remove('show');
+            // Back to Top functionality
+            const backToTopBtn = document.getElementById('back-to-top-btn');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
                 }
             });
-            question.setAttribute('aria-expanded', !isExpanded);
-            question.classList.toggle('expanded');
-            answer.classList.toggle('show');
-        });
-    });
 
-    // Set the current year in the footer
-    const currentYearElement = document.getElementById('current-year-main');
-    if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
-    }
-});
-</script>
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // FAQ Accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other open answers
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            otherQuestion.setAttribute('aria-expanded', 'false');
+                            otherQuestion.classList.remove('expanded');
+                            otherQuestion.nextElementSibling.classList.remove('show');
+                        }
+                    });
+
+                    // Toggle the clicked answer
+                    question.setAttribute('aria-expanded', !isExpanded);
+                    question.classList.toggle('expanded');
+                    answer.classList.toggle('show');
+                });
+            });
+
+            // Set the current year in the footer
+            document.getElementById('current-year-main').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
