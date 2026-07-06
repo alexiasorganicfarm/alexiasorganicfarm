@@ -134,26 +134,36 @@
         </div>
     </header>
 
-    <!-- Hero Slider Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-950 pt-20">
-        <!-- Slides Container -->
-        <div id="hero-slider" class="absolute inset-0 w-full h-full z-0">
-            <!-- Slide 1 (Active) -->
-            <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100">
-                <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80" alt="Lush Western Ghats" class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-105">
-            </div>
-            <!-- Slide 2 -->
-            <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95 pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=1920&q=80" alt="Fresh Organic Produce" class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-100">
-            </div>
-            <!-- Slide 3 -->
-            <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95 pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80" alt="Forest Canopy Sunlight" class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-100">
-            </div>
-        </div>
+   <!-- Slides Container -->
+<div id="hero-slider" class="absolute inset-0 w-full h-full z-0">
+    <!-- Slide 1 (Active) -->
+    <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100">
+        <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80" 
+             srcset="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80 1920w" 
+             sizes="100vw" 
+             width="1920" height="1080" 
+             fetchpriority="high"
+             alt="Lush Western Ghats" 
+             class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-105">
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=1920&q=80" 
+             width="1920" height="1080" 
+             alt="Fresh Organic Produce" 
+             class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-100">
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80" 
+             width="1920" height="1080" 
+             alt="Forest Canopy Sunlight" 
+             class="w-full h-full object-cover object-center transform transition-transform duration-[8000ms] scale-100">
+    </div>
+</div>
 
         <!-- Floating Particles/Atmosphere effect -->
         <div class="absolute inset-0 z-10 pointer-events-none opacity-40">
