@@ -68,15 +68,6 @@
         .ambient-glow {
             animation: pulseGlow 8s infinite ease-in-out;
         }
-
-        /* Slider overlay fade-in */
-        .slide-fade-in {
-            animation: slideFadeIn 0.8s forwards;
-        }
-        @keyframes slideFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
 <body class="bg-forest-50 font-sans text-forest-950 selection:bg-forest-200 selection:text-forest-900 overflow-x-hidden">
@@ -220,23 +211,6 @@
         </div>
     </div>
 </section>
-
-        <!-- Slider Controls / Dot Indicators -->
-        <div class="absolute bottom-6 right-6 md:right-12 z-20 flex items-center space-x-3 bg-black/30 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10">
-            <button onclick="prevSlide()" class="text-white/60 hover:text-white transition-colors p-1" aria-label="Previous Slide">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <div class="flex space-x-2">
-                <span onclick="setSlide(0)" class="slider-dot w-2 h-2 rounded-full cursor-pointer bg-white transition-all duration-300"></span>
-                <span onclick="setSlide(1)" class="slider-dot w-2 h-2 rounded-full cursor-pointer bg-white/40 transition-all duration-300"></span>
-                <span onclick="setSlide(2)" class="slider-dot w-2 h-2 rounded-full cursor-pointer bg-white/40 transition-all duration-300"></span>
-            </div>
-            <button onclick="nextSlide()" class="text-white/60 hover:text-white transition-colors p-1" aria-label="Next Slide">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-
     <!-- Visitor Info & WIP Guidelines Section -->
     <section id="visit-notice" class="bg-amber-50/40 border-y border-amber-200/60 py-12 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
@@ -656,62 +630,7 @@
 
     <!-- Application Logic & Custom Controls -->
     <script>
-        // Hero Image Slider State and Controls
-        let currentSlideIdx = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slider-dot');
-
-        function updateSlider() {
-            slides.forEach((slide, idx) => {
-                if (idx === currentSlideIdx) {
-                    slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-                    slide.classList.add('opacity-100', 'scale-100');
-                    const img = slide.querySelector('img');
-                    img.style.transform = 'scale(1.05)';
-                } else {
-                    slide.classList.remove('opacity-100', 'scale-100');
-                    slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-                    const img = slide.querySelector('img');
-                    img.style.transform = 'scale(1)';
-                }
-            });
-
-            dots.forEach((dot, idx) => {
-                if (idx === currentSlideIdx) {
-                    dot.classList.remove('bg-white/40');
-                    dot.classList.add('bg-white');
-                } else {
-                    dot.classList.remove('bg-white');
-                    dot.classList.add('bg-white/40');
-                }
-            });
-        }
-
-        function nextSlide() {
-            currentSlideIdx = (currentSlideIdx + 1) % slides.length;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            currentSlideIdx = (currentSlideIdx - 1 + slides.length) % slides.length;
-            updateSlider();
-        }
-
-        function setSlide(idx) {
-            currentSlideIdx = idx;
-            updateSlider();
-        }
-
-        // Automatic hero slide rotations (every 7 seconds)
-        let slideTimer = setInterval(nextSlide, 7000);
-
-        // Pause slideshow on hover
-        const heroSection = document.getElementById('hero');
-        heroSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
-        heroSection.addEventListener('mouseleave', () => {
-            slideTimer = setInterval(nextSlide, 7000);
-        });
-
+        
         // Mobile menu slide toggles
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
