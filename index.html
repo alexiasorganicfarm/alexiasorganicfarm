@@ -129,12 +129,17 @@
 <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-forest-950 pt-20">
     
     <!-- Hero Image (Static Background) -->
-    <div class="absolute inset-0 w-full h-full z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
-        <img src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%" 
-             alt="Hands holding a bowl of fresh, hand-picked organic cherry tomatoes at Alexia's Organic Farm in Beltangadi" 
-             class="w-full h-full object-cover object-center">
-    </div>
+   <div class="absolute inset-0 w-full h-full z-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
+    <img 
+        src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?q=80&w=800&auto=format&fit=crop" 
+        alt="Hands holding a bowl of fresh, hand-picked organic cherry tomatoes at Alexia's Organic Farm" 
+        class="w-full h-full object-cover object-center"
+        fetchpriority="high"
+        width="800"
+        height="533"
+    >
+</div>
 
     <!-- Hero Content Card -->
     <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 py-12 w-full flex flex-col justify-center min-h-[85vh]">
