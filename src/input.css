@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* Darker Forest Shades for better contrast */
+  --color-forest-50: #eef2ef;
+  --color-forest-500: #3a5c48;
+  --color-forest-700: #1e3328;
+  --color-forest-800: #16261d;
+  --color-forest-900: #0f1c15;
+  --color-forest-950: #0a130e;
+
+  /* Deeper Amber for accents */
+  --color-amber-600: #b45309;
+  --color-amber-700: #92400e;
+  --color-amber-800: #78350f;
+  --color-amber-950: #451a03;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", Inter, sans-serif;
+}
