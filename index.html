@@ -137,99 +137,89 @@
     <!-- Hero Section -->
 <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-forest-950 pt-20">
     
-    <!-- Hero Image (Static) -->
+    <!-- Hero Image (Static Background) -->
     <div class="absolute inset-0 w-full h-full z-0">
         <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/60 to-transparent z-10"></div>
-        <img src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-             alt="Fresh organic produce and fruits at Alexia's Organic Farm in Beltangadi" 
+        <img src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%" 
+             alt="Hands holding a bowl of fresh, hand-picked organic cherry tomatoes at Alexia's Organic Farm in Beltangadi" 
              class="w-full h-full object-cover object-center">
     </div>
 
     <!-- Hero Content Card -->
-    <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 py-12 w-full flex flex-col justify-center">
+    <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 py-12 w-full flex flex-col justify-center min-h-[85vh]">
         <div class="max-w-3xl">
+            
             <!-- Location Tag -->
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white/95 text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white/95 text-xs font-semibold tracking-wider uppercase mb-6 slide-fade-in shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                 <i class="fa-solid fa-location-dot text-amber-300"></i> Beltangadi, Western Ghats, Karnataka
             </div>
+
+            <!-- SEO Main Headlines -->
+            <div id="hero-headlines" class="slide-fade-in">
+                <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-amber-200">Alexia’s Organic Farm | Sustainable Forest Garden in Beltangadi</span>
+                </h1>
+                <p class="text-forest-100 text-lg sm:text-xl font-light leading-relaxed mb-8 max-w-2xl">
+                    Visit Alexia's Organic Farm in Beltangadi. A chemical-free, 5-acre forest garden featuring native fruit trees, organic spices, and sustainable, natural fish farming.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-4 slide-fade-in" style="animation-delay: 0.2s;">
+                <a href="https://wa.me/917619631892?text=Hello! I've read the notice and would love to be a part of the dream of a forest. I am interested in visiting." target="_blank" class="bg-gradient-to-r from-emerald-600 to-forest-700 hover:from-emerald-500 hover:to-forest-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Plan Your Visit</span>
+                </a>
+                <a href="#about" class="bg-white/10 hover:bg-white/15 text-white border border-white/30 backdrop-blur-md font-semibold px-8 py-4 rounded-xl shadow-md transition-all flex items-center gap-2 hover:border-white/50">
+                    <span>Read Our Story</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Live stats/Quick info bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-8 border-t border-white/10 text-white/80 text-xs sm:text-sm slide-fade-in" style="animation-delay: 0.4s;">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-amber-300">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div>
+                        <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Status</span>
+                        <span class="font-medium text-amber-300">Work in Progress</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-emerald-300">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
+                    <div>
+                        <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Admission</span>
+                        <span class="font-bold text-white uppercase text-emerald-400">Free Entry to ALL</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-emerald-300">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Visitation</span>
+                        <span class="font-medium text-white">Advance Notice</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-amber-300">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+                    <div>
+                        <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Availability</span>
+                        <span class="font-medium text-white text-emerald-300">Subject to Presence</span>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Add your H1 title and description here -->
         </div>
     </div>
 </section>
-
-        <!-- Hero Content Card -->
-        <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 py-12 w-full flex flex-col justify-center min-h-[85vh]">
-            <div class="max-w-3xl">
-                <!-- Location Tag -->
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white/95 text-xs font-semibold tracking-wider uppercase mb-6 slide-fade-in shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                    <i class="fa-solid fa-location-dot text-amber-300"></i> Beltangadi, Western Ghats, Karnataka
-                </div>
-
-                <!-- Main Headlines -->
-                <div id="hero-headlines" class="slide-fade-in">
-                    <h1 class="font-serif text-4xl sm:text-5xl sm:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-amber-200">Alexia’s Organic Farm | Sustainable Forest Garden in Beltangadi</span>
-                    </h1>
-                    <p class="text-forest-100 text-lg sm:text-xl font-light leading-relaxed mb-8 max-w-2xl">
-                        Visit Alexia's Organic Farm in Beltangadi. A chemical-free, 5-acre forest garden featuring native fruit trees, organic spices, and sustainable, natural fish farming.
-                    </p>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-wrap gap-4 slide-fade-in" style="animation-delay: 0.2s;">
-                    <a href="https://wa.me/917619631892?text=Hello! I've read the notice and would love to be a part of the dream of a forest. I am interested in visiting." target="_blank" class="bg-gradient-to-r from-emerald-600 to-forest-700 hover:from-emerald-500 hover:to-forest-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 flex items-center gap-3">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Plan Your Visit</span>
-                    </a>
-                    <a href="#about" class="bg-white/10 hover:bg-white/15 text-white border border-white/30 backdrop-blur-md font-semibold px-8 py-4 rounded-xl shadow-md transition-all flex items-center gap-2 hover:border-white/50">
-                        <span>Read Our Story</span>
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-                    </a>
-                </div>
-
-                <!-- Live stats/Quick info bar -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-8 border-t border-white/10 text-white/80 text-xs sm:text-sm slide-fade-in" style="animation-delay: 0.4s;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-amber-300">
-                            <i class="fa-solid fa-bell"></i>
-                        </div>
-                        <div>
-                            <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Status</span>
-                            <span class="font-medium text-amber-300">Work in Progress</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-emerald-300">
-                            <i class="fa-solid fa-ticket"></i>
-                        </div>
-                        <div>
-                            <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Admission</span>
-                            <span class="font-bold text-white uppercase text-emerald-400">Free Entry to ALL</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-emerald-300">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div>
-                            <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Visitation</span>
-                            <span class="font-medium text-white">Advance Notice</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 text-amber-300">
-                            <i class="fa-solid fa-user-clock"></i>
-                        </div>
-                        <div>
-                            <span class="block text-white/55 text-[10px] uppercase font-bold tracking-wider">Availability</span>
-                            <span class="font-medium text-white text-emerald-300">Subject to Presence</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Slider Controls / Dot Indicators -->
         <div class="absolute bottom-6 right-6 md:right-12 z-20 flex items-center space-x-3 bg-black/30 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10">
